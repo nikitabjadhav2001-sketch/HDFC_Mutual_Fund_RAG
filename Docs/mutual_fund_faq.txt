@@ -1,0 +1,36 @@
+HDFC Mutual Fund FAQ & Information Guide
+
+1. HDFC Large Cap Fund
+Expense Ratio: The Direct Plan expense ratio for HDFC Large Cap Fund is approximately 0.98%, and the Regular Plan expense ratio is approximately 1.74%.
+Fund Category: Equity - Large Cap.
+
+2. Equity Linked Savings Scheme (ELSS)
+Lock-in Period: ELSS mutual fund schemes have a mandatory lock-in period of 3 years under Section 80C of the Income Tax Act. You cannot redeem or transfer your investment before 3 years from the date of purchase.
+
+3. Capital Gains Statement Download
+Procedure to download capital-gains statement:
+Step 1: Log in to your mutual fund distributor platform or AMC portal (e.g., CAMS Online, KFintech, or Groww/Zerodha).
+Step 2: Go to the "Reports" or "Tax Statements" section.
+Step 3: Select "Capital Gains Statement" and choose the relevant Financial Year.
+Step 4: Click "Generate PDF/Excel" or "Email Statement" to download your official statement.
+
+4. Systematic Investment Plan (SIP) vs Lump Sum
+- SIP Definition: A Systematic Investment Plan allows you to invest a fixed amount of money at regular intervals (daily, monthly, quarterly) into a mutual fund scheme.
+- Lump Sum Definition: A lump sum investment is a one-time single investment of a larger sum of money.
+- Minimum SIP Amount: Most mutual fund schemes allow starting a monthly SIP with as low as Rs. 100 or Rs. 500.
+
+5. NAV (Net Asset Value)
+- What is NAV: Net Asset Value represents the per-unit market value of a mutual fund scheme. It is calculated daily at the close of stock market trading hours.
+- NAV Cut-off Timing: For liquid funds, the cut-off time for same-day NAV is typically 1:30 PM. For equity and debt funds, the cut-off time is 3:00 PM.
+
+6. Exit Load
+- What is Exit Load: An exit load is a fee charged by the AMC when an investor redeems or switches out of a mutual fund scheme before a specified duration.
+- Equity Fund Exit Load: Many standard equity schemes charge a 1% exit load if units are redeemed within 365 days of allotment. No exit load applies after 1 year.
+
+7. Capital Gains Tax on Mutual Funds
+- Short-Term Capital Gains (STCG) Equity: Gains on equity fund units held for 12 months or less are taxed at 20%.
+- Long-Term Capital Gains (LTCG) Equity: Gains on equity fund units held for more than 12 months above Rs. 1.25 Lakh per financial year are taxed at 12.5% without indexation.
+
+8. KYC (Know Your Customer) Verification
+- What is KYC: KYC is a mandatory regulatory requirement by SEBI to verify the identity and address of investors before investing in mutual funds.
+- Documents Required for KYC: PAN card, Aadhaar card or valid Passport/Voter ID, and a passport-size photo.

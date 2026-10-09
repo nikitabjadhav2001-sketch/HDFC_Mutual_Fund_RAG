@@ -1,0 +1,97 @@
+# Production compose (Phase 6). Run from the repo root with a populated .env:
+#
+#   docker compose -f deploy/docker-compose.prod.yml up --build -d
+#
+# - Secrets come from ../.env (never committed); DATABASE_URL/REDIS_URL are
+#   overridden below to point at the internal compose network.
+# - Postgres and Redis expose no host ports.
+# - Postgres backup (schedule this): 
+#     docker compose -f deploy/docker-compose.prod.yml exec postgres \
+#       pg_dump -U rag rag > "backup-$(date +%F).sql"
+#   Restore: `docker compose -f deploy/docker-compose.prod.yml exec -T postgres \
+#       psql -U rag rag < backup-YYYY-MM-DD.sql`
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rag
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rag}
+      POSTGRES_DB: rag
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag -d rag"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ..
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://rag:rag@postgres:5432/rag
+      REDIS_URL: redis://redis:6379/0
+      STORAGE_DIR: /srv/storage
+    volumes:
+      - ../storage:/srv/storage
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    build: ..
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://rag:rag@postgres:5432/rag
+      REDIS_URL: redis://redis:6379/0
+      STORAGE_DIR: /srv/storage
+    volumes:
+      - ../storage:/srv/storage
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: arq app.ingestion.worker.WorkerSettings
+
+  ui:
+    build:
+      context: ../ui
+      args:
+        VITE_API_KEY: ${API_KEY:-}
+        VITE_ADMIN_KEY: ${ADMIN_KEY:-}
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

@@ -1,0 +1,467 @@
+{
+  "timestamp": "2026-10-08T11:50:31+00:00",
+  "dataset": "eval\\dataset.jsonl",
+  "entries": 26,
+  "git_sha": "unknown",
+  "prompt_version": "v1",
+  "llm_model": null,
+  "embedding_provider": "hash",
+  "embedding_model": "hash-bow",
+  "thresholds": {
+    "faithfulness": 0.9,
+    "hit_at_5": 0.8
+  },
+  "summary": {
+    "retrieval": {
+      "hit_at_1": 0.9167,
+      "hit_at_3": 0.9583,
+      "hit_at_5": 0.9583,
+      "mrr": 0.9343,
+      "context_precision": 0.2128,
+      "context_recall": 0.9861,
+      "latency_ms_p95": 54.8
+    },
+    "generation": null
+  },
+  "gates": [
+    {
+      "metric": "hit_at_5",
+      "value": 0.9583,
+      "threshold": 0.8,
+      "passed": true
+    }
+  ],
+  "pass": true,
+  "per_entry": [
+    {
+      "question": "What is the refund window for damaged items?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6704,
+        "context_size": 13,
+        "latency_ms": 77.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How long does a standard refund take to arrive?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2163,
+        "context_size": 14,
+        "latency_ms": 43.6,
+        "hit@1": 0.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "Are shipping fees refundable?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4056,
+        "context_size": 13,
+        "latency_ms": 41.5,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How do I configure a kubernetes liveness probe?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3819,
+        "context_size": 12,
+        "latency_ms": 40.8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What is the difference between liveness and readiness probes?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4082,
+        "context_size": 20,
+        "latency_ms": 46.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.15,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "Why does postgres autovacuum cause table bloat?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 15,
+        "latency_ms": 42.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How can I detect that autovacuum is lagging behind?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2981,
+        "context_size": 14,
+        "latency_ms": 39.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What grind size should I use for espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3953,
+        "context_size": 16,
+        "latency_ms": 44.8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How does cold brew grind differ from espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4743,
+        "context_size": 14,
+        "latency_ms": 43.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How does mortgage amortization work?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2,
+        "context_size": 11,
+        "latency_ms": 42.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2727,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How can I pay off a thirty-year mortgage faster?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2936,
+        "context_size": 12,
+        "latency_ms": 40.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What is a nebula?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4867,
+        "context_size": 18,
+        "latency_ms": 41.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1111,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What conditions are needed to observe galaxies?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.1952,
+        "context_size": 18,
+        "latency_ms": 41.1,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0909,
+        "context_precision": 0.1667,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How should I balance a compost pile?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3152,
+        "context_size": 12,
+        "latency_ms": 43.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How hot does a compost heap get?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 13,
+        "latency_ms": 36.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What are Python type hints used for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 42.8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "When should I use Protocol and TypeVar in Python?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4042,
+        "context_size": 14,
+        "latency_ms": 39.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "Why are docker image layers cached?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6301,
+        "context_size": 13,
+        "latency_ms": 51.5,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What are multi-stage docker builds for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 54.8,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What is the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4472,
+        "context_size": 14,
+        "latency_ms": 42.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "Which gambit sacrifices a pawn against the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5353,
+        "context_size": 14,
+        "latency_ms": 37.2,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "How do I play barre chords on the guitar?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3553,
+        "context_size": 13,
+        "latency_ms": 40.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What is a vaccine booster dose for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5071,
+        "context_size": 16,
+        "latency_ms": 42.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 0.6667
+      },
+      "generation": null
+    },
+    {
+      "question": "What are common side effects of immunization?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.488,
+        "context_size": 14,
+        "latency_ms": 44.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": null
+    },
+    {
+      "question": "What is the airspeed velocity of an unladen swallow?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2722,
+        "context_size": 16,
+        "latency_ms": 43.3
+      },
+      "generation": null
+    },
+    {
+      "question": "What is the recipe for chocolate chip cookies?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3162,
+        "context_size": 16,
+        "latency_ms": 44.9
+      },
+      "generation": null
+    }
+  ]
+}

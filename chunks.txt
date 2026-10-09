@@ -1,0 +1,107 @@
+=== DOC: astronomy | CHUNK #0 | chunk_id=eec35cbb-35f6-448b-a144-fa027508a488 | doc_id=bca63a44-2a4d-4f6a-8d29-8b19c4572b48 ===
+A nebula is a cloud of gas and dust where new stars form, visible through a telescope as a faint fuzzy patch of light.
+
+=== DOC: astronomy | CHUNK #1 | chunk_id=6ee582e3-2dcc-4a03-b263-290f68165158 | doc_id=bca63a44-2a4d-4f6a-8d29-8b19c4572b48 ===
+Observing galaxies requires dark skies and a large aperture telescope; light pollution hides spiral arms from city observation locations.
+
+=== DOC: astronomy | CHUNK #2 | chunk_id=a0f38e2d-40df-47b9-8c5e-5e669b5bc26b | doc_id=bca63a44-2a4d-4f6a-8d29-8b19c4572b48 ===
+Amateur astronomers often photograph nebulae using long exposures tracked by an equatorial mount to keep stars sharp.
+
+=== DOC: chess | CHUNK #0 | chunk_id=7f071e7c-f462-4824-b624-7742794fdd58 | doc_id=16c36adb-d7bf-4788-a867-ac78bc8805a6 ===
+The sicilian defense is Black's most popular opening reply to 1.e4, creating imbalanced positions with counterplay on the open c-file.
+
+=== DOC: chess | CHUNK #1 | chunk_id=a213d529-f04f-4ada-9f16-24c21c9e8985 | doc_id=16c36adb-d7bf-4788-a867-ac78bc8805a6 ===
+In the Open Sicilian, White develops with knight to f3 and d4 pawn breaks while Black aims for dragon or najdorf pawn structures.
+
+=== DOC: chess | CHUNK #2 | chunk_id=61c378af-3573-4b3d-99b0-86439b1e2541 | doc_id=16c36adb-d7bf-4788-a867-ac78bc8805a6 ===
+The smith-morra gambit offers an early pawn sacrifice for rapid development against the sicilian defense formation.
+
+=== DOC: coffee | CHUNK #0 | chunk_id=b60f3d53-49c3-4b28-a840-c1e2b485b8d0 | doc_id=7d8e291f-f2b1-4183-86e0-3eca9ad6b594 ===
+Espresso extraction wants a fine grind size resembling table salt. Going finer slows the shot and increases pressure; a coarse grind causes channelling and sour, under-extracted shots.
+
+=== DOC: coffee | CHUNK #1 | chunk_id=048631bb-f926-4abd-9270-bda36fc79765 | doc_id=7d8e291f-f2b1-4183-86e0-3eca9ad6b594 ===
+Adjust grind size in small steps of one click at a time, keep the dose constant, and taste between adjustments before changing anything else.
+
+=== DOC: coffee | CHUNK #2 | chunk_id=02821c71-c773-4f6a-b62d-e0543c29330e | doc_id=7d8e291f-f2b1-4183-86e0-3eca9ad6b594 ===
+Cold brew uses a coarse grind steeped for twelve hours, completely different from the espresso grind size requirements.
+
+=== DOC: docker | CHUNK #0 | chunk_id=caba7d95-6d65-4ea4-bb23-933891fc4c22 | doc_id=f9fcead3-3236-4bda-bd38-8804c4001c36 ===
+Docker image layers are cached; changing only the last instruction in a Dockerfile rebuilds fast because earlier layers are reused.
+
+=== DOC: docker | CHUNK #1 | chunk_id=ea3c4f12-dcdd-4379-80df-b74ea9499d5d | doc_id=f9fcead3-3236-4bda-bd38-8804c4001c36 ===
+Multi-stage builds copy artifacts between stages to keep the final container image small and free of build tools.
+
+=== DOC: docker | CHUNK #2 | chunk_id=3aab58fd-bb5f-4a6d-8770-58a33845f601 | doc_id=f9fcead3-3236-4bda-bd38-8804c4001c36 ===
+docker build with BuildKit prints the timing of each layer so you can spot slow steps in the pipeline.
+
+=== DOC: gardening | CHUNK #0 | chunk_id=26a08955-1989-4592-bfa5-81eb0a8b5164 | doc_id=f9d40df9-eb00-4641-8b37-e566f7519c08 ===
+Compost pile layers should balance green nitrogen-rich material with brown carbon-rich material like dried leaves and cardboard.
+
+=== DOC: gardening | CHUNK #1 | chunk_id=d42bfc7e-367b-4b39-87e5-ac6107acc078 | doc_id=f9d40df9-eb00-4641-8b37-e566f7519c08 ===
+Pruning tomato suckers redirects energy into fruit; pinch them weekly during the growing season for larger harvests.
+
+=== DOC: gardening | CHUNK #2 | chunk_id=2d14a592-82cc-4231-8e7d-412684205fe4 | doc_id=f9d40df9-eb00-4641-8b37-e566f7519c08 ===
+A hot compost heap reaches sixty degrees Celsius and kills most weed seeds and pathogens within a few days.
+
+=== DOC: guitar | CHUNK #0 | chunk_id=914ec528-0507-4ae7-8583-46fb279bcf42 | doc_id=1c97bad9-c927-4553-b093-bf759a847a0c ===
+Barre chords use one finger pressed across the fretboard to move open chord shapes up and down the guitar neck.
+
+=== DOC: guitar | CHUNK #1 | chunk_id=e5889a68-65d0-4ddd-8049-273deb073269 | doc_id=1c97bad9-c927-4553-b093-bf759a847a0c ===
+Start with the F major barre chord at the first fret and practice thumb placement behind the neck.
+
+=== DOC: guitar | CHUNK #2 | chunk_id=eedd43ed-c721-400c-b0da-3c234cc53f04 | doc_id=1c97bad9-c927-4553-b093-bf759a847a0c ===
+Alternate strumming patterns of down-up-down-up keep rhythm steady while chord changes happen cleanly on the beat.
+
+=== DOC: kubernetes | CHUNK #0 | chunk_id=779482fd-a252-4153-918a-a2a66dd070ab | doc_id=e78d771a-68bd-4c37-ab2b-0dabb8d1b112 ===
+Configure a kubernetes liveness probe to restart containers that stop responding. The probe can be an HTTP GET request, a TCP socket check, or an exec command defined in the pod spec.
+
+=== DOC: kubernetes | CHUNK #1 | chunk_id=44a2ba24-f4ec-46d0-bff7-7d00dff2c739 | doc_id=e78d771a-68bd-4c37-ab2b-0dabb8d1b112 ===
+Readiness probes control traffic routing and are separate from liveness probes. Set initialDelaySeconds appropriately to avoid restart loops during slow application startup.
+
+=== DOC: kubernetes | CHUNK #2 | chunk_id=1622f8df-4222-41f7-b0f5-fbd68cc12ad7 | doc_id=e78d771a-68bd-4c37-ab2b-0dabb8d1b112 ===
+kubectl describe pod shows probe events and restart counts when a liveness probe fails repeatedly on a node.
+
+=== DOC: mortgage | CHUNK #0 | chunk_id=6e4e4e1c-cbd0-444d-ba79-eb569d10b0fc | doc_id=42fd6dcd-a08d-468b-843e-66396860e97f ===
+Mortgage amortization means each monthly payment covers interest first and principal second, so early payments build home equity slowly over the loan term.
+
+=== DOC: mortgage | CHUNK #1 | chunk_id=a9d49692-53f9-4107-a9ed-7a9ec81c9ef8 | doc_id=42fd6dcd-a08d-468b-843e-66396860e97f ===
+Making one extra payment per year shortens a thirty-year mortgage substantially because the extra amount reduces principal immediately and saves future interest.
+
+=== DOC: mortgage | CHUNK #2 | chunk_id=6de3cd4c-3b3a-4e8f-8468-ea29e6de4ed0 | doc_id=42fd6dcd-a08d-468b-843e-66396860e97f ===
+An amortization schedule table shows the interest and principal split for every monthly payment across the whole mortgage.
+
+=== DOC: postgres | CHUNK #0 | chunk_id=ca58f9e4-c1df-4d91-973e-d5364f60df0a | doc_id=5299fb0c-dbc7-4fe1-ba89-74d9ac9e7408 ===
+Postgres autovacuum reclaims space from dead tuples but can cause table bloat when it falls behind heavy update workloads in a busy database.
+
+=== DOC: postgres | CHUNK #1 | chunk_id=a4746ccb-6a33-47ab-be3e-b503557c2c52 | doc_id=5299fb0c-dbc7-4fe1-ba89-74d9ac9e7408 ===
+Tune autovacuum_vacuum_cost_limit and autovacuum_vacuum_scale_factor to keep up with churn. A manual VACUUM FULL rewrites the table but takes an exclusive lock.
+
+=== DOC: postgres | CHUNK #2 | chunk_id=f12cb702-7b73-4ff8-b1d8-4484d25bb0ce | doc_id=5299fb0c-dbc7-4fe1-ba89-74d9ac9e7408 ===
+Monitor pg_stat_user_tables for n_dead_tup growth to detect when vacuum is lagging behind the write rate.
+
+=== DOC: python-typing | CHUNK #0 | chunk_id=1e3c3c6c-5996-4420-a418-1ffdd1e35eac | doc_id=b2e22e00-ce87-469b-99f8-45f608ddbfd6 ===
+Python type hints annotate function signatures so mypy can catch bugs before runtime without executing the code.
+
+=== DOC: python-typing | CHUNK #1 | chunk_id=a1438022-727f-4bae-99ab-5e462d3cbbd3 | doc_id=b2e22e00-ce87-469b-99f8-45f608ddbfd6 ===
+Use Protocol for structural subtyping and TypeVar for generics in complex annotation scenarios across modules.
+
+=== DOC: python-typing | CHUNK #2 | chunk_id=253005c0-5cf5-4f06-aa35-5996b7e1c79d | doc_id=b2e22e00-ce87-469b-99f8-45f608ddbfd6 ===
+Gradually add annotations module by module and enable strict mode in mypy once coverage is high.
+
+=== DOC: refunds | CHUNK #0 | chunk_id=ca7ea0ca-f70d-40ec-9676-738a8a665ed1 | doc_id=d5e93e98-683c-463e-acdb-f1022aea125c ===
+Our refund policy allows customers to return any purchase within 30 days of delivery. Refunds are issued to the original payment method within five business days of the return arriving at our warehouse.
+
+=== DOC: refunds | CHUNK #1 | chunk_id=a56f7235-91c0-4e5d-93ec-f0b873f837e9 | doc_id=d5e93e98-683c-463e-acdb-f1022aea125c ===
+Damaged items qualify for an expedited refund. Photograph the damage, contact support, and a prepaid return label is emailed within 24 hours. The refund window for damaged items is extended to 45 days from delivery.
+
+=== DOC: refunds | CHUNK #2 | chunk_id=bc0fcb2b-9569-4b33-8e30-e52426868b03 | doc_id=d5e93e98-683c-463e-acdb-f1022aea125c ===
+Shipping fees are non-refundable unless the carrier lost the parcel. International refunds are converted at the daily exchange rate on the processing date.
+
+=== DOC: vaccines | CHUNK #0 | chunk_id=057f5f4b-0df6-4ade-8c46-2fbb5d8c0460 | doc_id=d2fc7813-936f-4752-8ee4-574f3c16d16b ===
+A booster dose strengthens immunity when antibody levels from the initial vaccine dose wane over time.
+
+=== DOC: vaccines | CHUNK #1 | chunk_id=472ecf22-e992-4137-8176-010a92c45427 | doc_id=d2fc7813-936f-4752-8ee4-574f3c16d16b ===
+Pediatric vaccine dosage is weight-based for infants and fixed for older children according to the immunization schedule.
+
+=== DOC: vaccines | CHUNK #2 | chunk_id=d7bbd2db-9e8d-48f8-8428-be108fc0eddb | doc_id=d2fc7813-936f-4752-8ee4-574f3c16d16b ===
+Side effects of immunization are usually mild soreness and fatigue lasting one to two days.

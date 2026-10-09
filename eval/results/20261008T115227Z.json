@@ -1,0 +1,714 @@
+{
+  "timestamp": "2026-10-08T11:52:27+00:00",
+  "dataset": "eval\\dataset.jsonl",
+  "entries": 26,
+  "git_sha": "unknown",
+  "prompt_version": "v1",
+  "llm_model": "openai/gpt-oss-120b",
+  "embedding_provider": "hash",
+  "embedding_model": "hash-bow",
+  "thresholds": {
+    "faithfulness": 0.9,
+    "hit_at_5": 0.8
+  },
+  "summary": {
+    "retrieval": {
+      "hit_at_1": 0.9167,
+      "hit_at_3": 0.9583,
+      "hit_at_5": 0.9583,
+      "mrr": 0.9343,
+      "context_precision": 0.2128,
+      "context_recall": 0.9861,
+      "latency_ms_p95": 84.5
+    },
+    "generation": {
+      "faithfulness": 0.8974,
+      "answer_relevancy": 0.7153,
+      "token_f1": 0.5592,
+      "citation_correctness": 0.8333,
+      "refusal_accuracy": 1.0,
+      "first_token_ms_p95": 7022.5
+    }
+  },
+  "gates": [
+    {
+      "metric": "hit_at_5",
+      "value": 0.9583,
+      "threshold": 0.8,
+      "passed": true
+    },
+    {
+      "metric": "faithfulness",
+      "value": 0.8974,
+      "threshold": 0.9,
+      "passed": false
+    }
+  ],
+  "pass": false,
+  "per_entry": [
+    {
+      "question": "What is the refund window for damaged items?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6704,
+        "context_size": 13,
+        "latency_ms": 84.5,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.7368,
+        "citation_correctness": 1.0,
+        "answer": "The refund window for damaged items is extended to 45 days from delivery. [1]",
+        "source_count": 1,
+        "first_token_ms": 875.3
+      }
+    },
+    {
+      "question": "How long does a standard refund take to arrive?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2163,
+        "context_size": 14,
+        "latency_ms": 45.0,
+        "hit@1": 0.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.3333,
+        "token_f1": 0.5161,
+        "citation_correctness": 1.0,
+        "answer": "A standard refund is issued to the original payment method within five business days after the returned item arrives at the warehouse [4].",
+        "source_count": 1,
+        "first_token_ms": 635.2
+      }
+    },
+    {
+      "question": "Are shipping fees refundable?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4056,
+        "context_size": 13,
+        "latency_ms": 45.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.6,
+        "citation_correctness": 1.0,
+        "answer": "Shipping fees are generally non‑refundable, except in the case where the carrier loses the parcel. [1]",
+        "source_count": 1,
+        "first_token_ms": 583.3
+      }
+    },
+    {
+      "question": "How do I configure a kubernetes liveness probe?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3819,
+        "context_size": 12,
+        "latency_ms": 88.4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.3333,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.2899,
+        "citation_correctness": 1.0,
+        "answer": "To set up a Kubernetes liveness probe, add a `livenessProbe` section to the container’s spec in your pod definition. Within this section you can choose one of three probe types:\n\n* **HTTP GET** – specify a URL path, port, and optional headers.  \n* **TCP socket** – specify a host and port to attempt a TCP connection.  \n* **Exec command** – provide a command that runs inside the container; a zero exit code means the container is healthy.\n\nWhen the probe fails, Kubernetes will automatically restart the container. [1]",
+        "source_count": 1,
+        "first_token_ms": 759.0
+      }
+    },
+    {
+      "question": "What is the difference between liveness and readiness probes?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4082,
+        "context_size": 20,
+        "latency_ms": 51.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.15,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.3404,
+        "citation_correctness": 1.0,
+        "answer": "Readiness probes are used to control whether a pod is considered ready to receive traffic, while liveness probes are used to detect when a container has stopped responding so it can be restarted. In other words, readiness determines routing of requests, and liveness determines container health‑restart behavior [1][2].",
+        "source_count": 2,
+        "first_token_ms": 655.1
+      }
+    },
+    {
+      "question": "Why does postgres autovacuum cause table bloat?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 15,
+        "latency_ms": 42.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.6667,
+        "token_f1": 0.3462,
+        "citation_correctness": 1.0,
+        "answer": "Postgres’s autovacuum process does reclaim space from dead tuples, but when it can’t keep up with a heavy rate of updates—i.e., it falls behind—the accumulation of those dead tuples isn’t removed quickly enough. This lag lets unused space build up inside the table, leading to table bloat even though autovacuum is running. [1]",
+        "source_count": 1,
+        "first_token_ms": 553.4
+      }
+    },
+    {
+      "question": "How can I detect that autovacuum is lagging behind?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2981,
+        "context_size": 14,
+        "latency_ms": 41.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.5116,
+        "citation_correctness": 1.0,
+        "answer": "You can watch the `pg_stat_user_tables` view and look for a rising `n_dead_tup` count—if the number of dead tuples keeps growing, it means the autovacuum process isn’t keeping up with the write rate and is lagging behind [1].",
+        "source_count": 1,
+        "first_token_ms": 1009.3
+      }
+    },
+    {
+      "question": "What grind size should I use for espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3953,
+        "context_size": 16,
+        "latency_ms": 51.4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5,
+        "token_f1": 0.4286,
+        "citation_correctness": 1.0,
+        "answer": "Espresso extraction requires a fine grind that feels like table salt. Using a finer grind will slow the shot and increase pressure, while a coarser grind can cause channeling and under‑extracted, sour shots. [6]",
+        "source_count": 1,
+        "first_token_ms": 746.1
+      }
+    },
+    {
+      "question": "How does cold brew grind differ from espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4743,
+        "context_size": 14,
+        "latency_ms": 41.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6667,
+        "token_f1": 0.3684,
+        "citation_correctness": 1.0,
+        "answer": "Cold‑brew coffee is made with a **coarse grind**, which is steeped for many hours, whereas espresso requires a **fine grind** that feels like table salt; the finer particles increase resistance and pressure during extraction. [1][3]",
+        "source_count": 2,
+        "first_token_ms": 660.2
+      }
+    },
+    {
+      "question": "How does mortgage amortization work?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2,
+        "context_size": 11,
+        "latency_ms": 44.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2727,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5,
+        "token_f1": 0.3846,
+        "citation_correctness": 0.0,
+        "answer": "Mortgage amortization is the process by which each monthly payment is divided into an interest portion and a principal portion. Each payment first covers the accrued interest, and the remainder reduces the loan principal, so equity builds slowly at the start of the loan term. An amortization schedule lists this interest‑and‑principal split for every payment over the life of the mortgage【3】【1】.",
+        "source_count": 0,
+        "first_token_ms": 1030.4
+      }
+    },
+    {
+      "question": "How can I pay off a thirty-year mortgage faster?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2936,
+        "context_size": 12,
+        "latency_ms": 41.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5,
+        "token_f1": 0.56,
+        "citation_correctness": 0.0,
+        "answer": "You can shorten a thirty‑year mortgage by making extra principal payments—​for example, adding one additional payment each year. That extra amount reduces the loan balance right away and cuts the amount of interest that will accrue later, which substantially shortens the loan term【1】.",
+        "source_count": 0,
+        "first_token_ms": 3361.0
+      }
+    },
+    {
+      "question": "What is a nebula?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4867,
+        "context_size": 18,
+        "latency_ms": 47.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1111,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.8966,
+        "citation_correctness": 1.0,
+        "answer": "A nebula is a cloud of gas and dust where new stars form, appearing through a telescope as a faint, fuzzy patch of light. [1]",
+        "source_count": 1,
+        "first_token_ms": 5522.4
+      }
+    },
+    {
+      "question": "What conditions are needed to observe galaxies?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.1952,
+        "context_size": 18,
+        "latency_ms": 44.3,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0909,
+        "context_precision": 0.1667,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.25,
+        "token_f1": 0.7879,
+        "citation_correctness": 1.0,
+        "answer": "Observing galaxies requires dark skies and a large‑aperture telescope; light pollution in city areas can hide details such as spiral arms. [11]",
+        "source_count": 1,
+        "first_token_ms": 6676.9
+      }
+    },
+    {
+      "question": "How should I balance a compost pile?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3152,
+        "context_size": 12,
+        "latency_ms": 40.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.5,
+        "token_f1": 0.5556,
+        "citation_correctness": 1.0,
+        "answer": "Balance the pile by mixing green, nitrogen‑rich materials with brown, carbon‑rich materials such as dried leaves and cardboard. This mix provides the right ratio of nutrients and structure for effective composting. [1]",
+        "source_count": 1,
+        "first_token_ms": 5859.3
+      }
+    },
+    {
+      "question": "How hot does a compost heap get?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 13,
+        "latency_ms": 41.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.3,
+        "citation_correctness": 1.0,
+        "answer": "A hot compost heap can reach about 60 °C [1].",
+        "source_count": 1,
+        "first_token_ms": 5553.2
+      }
+    },
+    {
+      "question": "What are Python type hints used for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 41.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.8571,
+        "citation_correctness": 1.0,
+        "answer": "Python type hints annotate function signatures so that tools like mypy can catch bugs before runtime without executing the code [1].",
+        "source_count": 1,
+        "first_token_ms": 5835.6
+      }
+    },
+    {
+      "question": "When should I use Protocol and TypeVar in Python?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4042,
+        "context_size": 14,
+        "latency_ms": 79.4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.4667,
+        "citation_correctness": 1.0,
+        "answer": "Use Protocol when you need structural (duck‑typed) subtyping, and use TypeVar when you need generic type parameters for more complex annotations that span multiple modules. [1]",
+        "source_count": 1,
+        "first_token_ms": 5767.2
+      }
+    },
+    {
+      "question": "Why are docker image layers cached?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6301,
+        "context_size": 13,
+        "latency_ms": 43.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8,
+        "token_f1": 0.3902,
+        "citation_correctness": 0.0,
+        "answer": "Docker caches each image layer so that earlier layers can be reused on subsequent builds. This lets Docker skip rebuilding those layers and rebuild only the changed parts—e.g., if only the last Dockerfile instruction changes, the build is fast because the cached earlier layers are reused【1】.",
+        "source_count": 0,
+        "first_token_ms": 3763.5
+      }
+    },
+    {
+      "question": "What are multi-stage docker builds for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 42.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.5641,
+        "citation_correctness": 1.0,
+        "answer": "Multi‑stage Docker builds let you copy only the needed artifacts from earlier build stages into a later stage, producing a final image that is small and doesn’t include the build tools used earlier. [1]",
+        "source_count": 1,
+        "first_token_ms": 7529.6
+      }
+    },
+    {
+      "question": "What is the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4472,
+        "context_size": 14,
+        "latency_ms": 41.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.9375,
+        "citation_correctness": 1.0,
+        "answer": "The Sicilian Defense is Black’s most popular opening reply to 1.e4, creating imbalanced positions with counterplay on the open c‑file. [1]",
+        "source_count": 1,
+        "first_token_ms": 5896.6
+      }
+    },
+    {
+      "question": "Which gambit sacrifices a pawn against the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5353,
+        "context_size": 14,
+        "latency_ms": 42.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.6,
+        "citation_correctness": 1.0,
+        "answer": "The Smith‑Morra Gambit sacrifices a pawn against the Sicilian Defense. [1]",
+        "source_count": 1,
+        "first_token_ms": 5762.3
+      }
+    },
+    {
+      "question": "How do I play barre chords on the guitar?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3553,
+        "context_size": 13,
+        "latency_ms": 47.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.4,
+        "token_f1": 0.4,
+        "citation_correctness": 1.0,
+        "answer": "Barre chords are played by laying a single finger (usually the index) flat across all the strings at a given fret, turning an open‑chord shape into a movable “bar” that can be shifted up and down the neck [1]. A common way to start is with the F‑major barre shape at the first fret, paying attention to keep your thumb positioned behind the neck for support [2].",
+        "source_count": 2,
+        "first_token_ms": 4742.5
+      }
+    },
+    {
+      "question": "What is a vaccine booster dose for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5071,
+        "context_size": 16,
+        "latency_ms": 43.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 0.6667
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.75,
+        "citation_correctness": 0.0,
+        "answer": "A booster dose is given to strengthen immunity when the antibody levels from the initial vaccine dose have waned over time【1】.",
+        "source_count": 0,
+        "first_token_ms": 6816.1
+      }
+    },
+    {
+      "question": "What are common side effects of immunization?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.488,
+        "context_size": 14,
+        "latency_ms": 38.7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.8333,
+        "citation_correctness": 1.0,
+        "answer": "Common side effects of immunization are usually mild soreness and fatigue that last one to two days [1].",
+        "source_count": 1,
+        "first_token_ms": 5758.1
+      }
+    },
+    {
+      "question": "What is the airspeed velocity of an unladen swallow?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2722,
+        "context_size": 16,
+        "latency_ms": 42.1
+      },
+      "generation": {
+        "refused": true,
+        "faithfulness": 1.0,
+        "answer_relevancy": null,
+        "token_f1": null,
+        "citation_correctness": null,
+        "answer": "I don't have enough information in the provided context to answer this question.",
+        "source_count": 0,
+        "first_token_ms": 5693.4
+      }
+    },
+    {
+      "question": "What is the recipe for chocolate chip cookies?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3162,
+        "context_size": 16,
+        "latency_ms": 44.3
+      },
+      "generation": {
+        "refused": true,
+        "faithfulness": 1.0,
+        "answer_relevancy": null,
+        "token_f1": null,
+        "citation_correctness": null,
+        "answer": "I don't have enough information in the provided context to answer this question.",
+        "source_count": 0,
+        "first_token_ms": 7022.5
+      }
+    }
+  ]
+}

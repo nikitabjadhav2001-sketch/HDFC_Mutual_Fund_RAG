@@ -1,0 +1,126 @@
+{
+  "documents": [
+    {
+      "title": "refunds",
+      "chunks": [
+        "Our refund policy allows customers to return any purchase within 30 days of delivery. Refunds are issued to the original payment method within five business days of the return arriving at our warehouse.",
+        "Damaged items qualify for an expedited refund. Photograph the damage, contact support, and a prepaid return label is emailed within 24 hours. The refund window for damaged items is extended to 45 days from delivery.",
+        "Shipping fees are non-refundable unless the carrier lost the parcel. International refunds are converted at the daily exchange rate on the processing date."
+      ]
+    },
+    {
+      "title": "kubernetes",
+      "chunks": [
+        "Configure a kubernetes liveness probe to restart containers that stop responding. The probe can be an HTTP GET request, a TCP socket check, or an exec command defined in the pod spec.",
+        "Readiness probes control traffic routing and are separate from liveness probes. Set initialDelaySeconds appropriately to avoid restart loops during slow application startup.",
+        "kubectl describe pod shows probe events and restart counts when a liveness probe fails repeatedly on a node."
+      ]
+    },
+    {
+      "title": "postgres",
+      "chunks": [
+        "Postgres autovacuum reclaims space from dead tuples but can cause table bloat when it falls behind heavy update workloads in a busy database.",
+        "Tune autovacuum_vacuum_cost_limit and autovacuum_vacuum_scale_factor to keep up with churn. A manual VACUUM FULL rewrites the table but takes an exclusive lock.",
+        "Monitor pg_stat_user_tables for n_dead_tup growth to detect when vacuum is lagging behind the write rate."
+      ]
+    },
+    {
+      "title": "coffee",
+      "chunks": [
+        "Espresso extraction wants a fine grind size resembling table salt. Going finer slows the shot and increases pressure; a coarse grind causes channelling and sour, under-extracted shots.",
+        "Adjust grind size in small steps of one click at a time, keep the dose constant, and taste between adjustments before changing anything else.",
+        "Cold brew uses a coarse grind steeped for twelve hours, completely different from the espresso grind size requirements."
+      ]
+    },
+    {
+      "title": "mortgage",
+      "chunks": [
+        "Mortgage amortization means each monthly payment covers interest first and principal second, so early payments build home equity slowly over the loan term.",
+        "Making one extra payment per year shortens a thirty-year mortgage substantially because the extra amount reduces principal immediately and saves future interest.",
+        "An amortization schedule table shows the interest and principal split for every monthly payment across the whole mortgage."
+      ]
+    },
+    {
+      "title": "astronomy",
+      "chunks": [
+        "A nebula is a cloud of gas and dust where new stars form, visible through a telescope as a faint fuzzy patch of light.",
+        "Observing galaxies requires dark skies and a large aperture telescope; light pollution hides spiral arms from city observation locations.",
+        "Amateur astronomers often photograph nebulae using long exposures tracked by an equatorial mount to keep stars sharp."
+      ]
+    },
+    {
+      "title": "gardening",
+      "chunks": [
+        "Compost pile layers should balance green nitrogen-rich material with brown carbon-rich material like dried leaves and cardboard.",
+        "Pruning tomato suckers redirects energy into fruit; pinch them weekly during the growing season for larger harvests.",
+        "A hot compost heap reaches sixty degrees Celsius and kills most weed seeds and pathogens within a few days."
+      ]
+    },
+    {
+      "title": "python-typing",
+      "chunks": [
+        "Python type hints annotate function signatures so mypy can catch bugs before runtime without executing the code.",
+        "Use Protocol for structural subtyping and TypeVar for generics in complex annotation scenarios across modules.",
+        "Gradually add annotations module by module and enable strict mode in mypy once coverage is high."
+      ]
+    },
+    {
+      "title": "docker",
+      "chunks": [
+        "Docker image layers are cached; changing only the last instruction in a Dockerfile rebuilds fast because earlier layers are reused.",
+        "Multi-stage builds copy artifacts between stages to keep the final container image small and free of build tools.",
+        "docker build with BuildKit prints the timing of each layer so you can spot slow steps in the pipeline."
+      ]
+    },
+    {
+      "title": "chess",
+      "chunks": [
+        "The sicilian defense is Black's most popular opening reply to 1.e4, creating imbalanced positions with counterplay on the open c-file.",
+        "In the Open Sicilian, White develops with knight to f3 and d4 pawn breaks while Black aims for dragon or najdorf pawn structures.",
+        "The smith-morra gambit offers an early pawn sacrifice for rapid development against the sicilian defense formation."
+      ]
+    },
+    {
+      "title": "guitar",
+      "chunks": [
+        "Barre chords use one finger pressed across the fretboard to move open chord shapes up and down the guitar neck.",
+        "Start with the F major barre chord at the first fret and practice thumb placement behind the neck.",
+        "Alternate strumming patterns of down-up-down-up keep rhythm steady while chord changes happen cleanly on the beat."
+      ]
+    },
+    {
+      "title": "vaccines",
+      "chunks": [
+        "A booster dose strengthens immunity when antibody levels from the initial vaccine dose wane over time.",
+        "Pediatric vaccine dosage is weight-based for infants and fixed for older children according to the immunization schedule.",
+        "Side effects of immunization are usually mild soreness and fatigue lasting one to two days."
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "question": "what is the refund window for damaged items",
+      "expected_doc": "refunds"
+    },
+    {
+      "question": "how do I configure a kubernetes liveness probe",
+      "expected_doc": "kubernetes"
+    },
+    {
+      "question": "why does postgres autovacuum cause table bloat",
+      "expected_doc": "postgres"
+    },
+    {
+      "question": "what grind size should I use for espresso",
+      "expected_doc": "coffee"
+    },
+    {
+      "question": "how does mortgage amortization work",
+      "expected_doc": "mortgage"
+    },
+    {
+      "question": "best opening moves in the sicilian defense",
+      "expected_doc": "chess"
+    }
+  ]
+}

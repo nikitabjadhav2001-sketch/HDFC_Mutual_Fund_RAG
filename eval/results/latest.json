@@ -1,0 +1,714 @@
+{
+  "timestamp": "2026-10-08T12:26:34+00:00",
+  "dataset": "eval\\dataset.jsonl",
+  "entries": 26,
+  "git_sha": "unknown",
+  "prompt_version": "v2",
+  "llm_model": "openai/gpt-oss-120b",
+  "embedding_provider": "hash",
+  "embedding_model": "hash-bow",
+  "thresholds": {
+    "faithfulness": 0.9,
+    "hit_at_5": 0.8
+  },
+  "summary": {
+    "retrieval": {
+      "hit_at_1": 0.9167,
+      "hit_at_3": 0.9583,
+      "hit_at_5": 0.9583,
+      "mrr": 0.9343,
+      "context_precision": 0.2128,
+      "context_recall": 0.9861,
+      "latency_ms_p95": 118.5
+    },
+    "generation": {
+      "faithfulness": 0.075,
+      "answer_relevancy": 0.7715,
+      "token_f1": 0.0921,
+      "citation_correctness": 0.0,
+      "refusal_accuracy": 0.9231,
+      "first_token_ms_p95": 15794.8
+    }
+  },
+  "gates": [
+    {
+      "metric": "hit_at_5",
+      "value": 0.9583,
+      "threshold": 0.8,
+      "passed": true
+    },
+    {
+      "metric": "faithfulness",
+      "value": 0.075,
+      "threshold": 0.9,
+      "passed": false
+    }
+  ],
+  "pass": false,
+  "per_entry": [
+    {
+      "question": "What is the refund window for damaged items?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6704,
+        "context_size": 13,
+        "latency_ms": 214.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.2727,
+        "citation_correctness": 0.0,
+        "answer": "You’ve got roughly a month‑and‑a‑half to act – most sellers give you about **45 days from the day the package lands at your door** to report a damaged item and get a refund. After that window closes, the claim usually falls through the cracks. So mark your calendar, snap a photo, and get that request in before the six‑week mark is up!",
+        "source_count": 0,
+        "first_token_ms": 1395.5
+      }
+    },
+    {
+      "question": "How long does a standard refund take to arrive?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2163,
+        "context_size": 14,
+        "latency_ms": 85.2,
+        "hit@1": 0.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.3333,
+        "token_f1": 0.2469,
+        "citation_correctness": 0.0,
+        "answer": "A “standard” refund usually shows up pretty quickly once the merchant has processed your return. In most cases the money is pushed back to the original payment method within a few business days—think 3‑5 working days after the returned package has been logged in the system. If you’re dealing with a slower‑moving bank or a weekend, it can stretch to about a week, but you’ll typically see the credit hit your account before the next billing cycle rolls around. If it’s taking longer than that, a quick call to customer support (or a peek at your online order portal) will usually reveal whether anything got stuck in transit.",
+        "source_count": 0,
+        "first_token_ms": 951.5
+      }
+    },
+    {
+      "question": "Are shipping fees refundable?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4056,
+        "context_size": 13,
+        "latency_ms": 67.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.1667,
+        "answer_relevancy": 0.3333,
+        "token_f1": 0.0545,
+        "citation_correctness": 0.0,
+        "answer": "In most shops, the little “shipping‑and‑handling” line on your receipt is treated like a one‑way ticket: once the carrier’s truck has rolled out of the warehouse, that fee is yours to keep. It’s the price you pay for the magic of getting a box from point A to point B, and companies usually don’t hand it back even if you decide the item isn’t right for you.\n\nThat said, the universe does have a few loopholes. If the carrier misplaces or outright loses the parcel, many retailers will roll the shipping cost back into your pocket as a goodwill gesture (sometimes even adding a little extra for the inconvenience). Some boutique stores also offer a “shipping‑on‑us” guarantee if you return a damaged or defective item within a generous window—think 45 days instead of the usual 30.\n\nSo, the short answer: **normally no, but if the delivery never actually arrives (or arrives in a state that can’t be used), you’ll often see the shipping fee magically reappear on your refund.**",
+        "source_count": 0,
+        "first_token_ms": 772.8
+      }
+    },
+    {
+      "question": "How do I configure a kubernetes liveness probe?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3819,
+        "context_size": 12,
+        "latency_ms": 67.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.1364,
+        "answer_relevancy": 0.8,
+        "token_f1": 0.0421,
+        "citation_correctness": 0.0,
+        "answer": "### The Art of Giving Your Pods a “Heartbeat”\n\nThink of a Kubernetes pod as a tiny astronaut floating in the void. If the astronaut stops moving, the mission control (the kube‑scheduler) needs to know **right now** so it can send a rescue pod. A **liveness probe** is that heartbeat monitor.\n\nBelow is a step‑by‑step recipe (with a dash of storytelling) for wiring up a reliable liveness probe.\n\n---\n\n## 1️⃣ Choose Your Pulse‑Check Method\n\n| Method | When to Use It | What It Looks Like |\n|--------|----------------|--------------------|\n| **HTTP GET** | Your app already serves an HTTP endpoint (e.g., `/healthz`). | `GET http://<pod-ip>:8080/healthz` |\n| **TCP Socket** | You have a raw TCP service (databases, gRPC, custom protocol). | Open a socket to `<pod-ip>:5432` |\n| **Exec Command** | The app is a binary that can self‑diagnose (`/usr/local/bin/check‑alive`). | Run a shell command inside the container. |\n\nPick the one that feels most natural for your service. You can even mix‑and‑match across containers in the same pod.\n\n---\n\n## 2️⃣ Sketch the YAML Blueprint\n\nHere’s a **playful** but fully functional snippet for each style. Drop it into the `spec.containers[].livenessProbe` section of your pod (or Deployment, StatefulSet, etc.) and watch the magic happen.\n\n### 🎯 HTTP GET Example\n\n```yaml\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: star‑tracker\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: star‑tracker\n  template:\n    metadata:\n      labels:\n        app: star‑tracker\n    spec:\n      containers:\n      - name: tracker\n        image: ghcr.io/space‑labs/tracker:latest\n        ports:\n        - containerPort: 8080\n        livenessProbe:\n          httpGet:\n            path: /healthz          # the “pulse” endpoint\n            port: 8080\n          initialDelaySeconds: 15   # give the app a chance to boot\n          periodSeconds: 10         # check every 10 s\n          timeoutSeconds: 2         # give up if no reply in 2 s\n          failureThreshold: 3       # 3 misses → restart\n          successThreshold: 1\n```\n\n### 🔌 TCP Socket Example\n\n```yaml\n        livenessProbe:\n          tcpSocket:\n            port: 5432               # e.g., a Postgres listener\n          initialDelaySeconds: 20\n          periodSeconds: 15\n          timeoutSeconds: 1\n          failureThreshold: 4\n```\n\n### 🧪 Exec Command Example\n\n```yaml\n        livenessProbe:\n          exec:\n            command:\n            - /bin/sh\n            - -c\n            - |\n              #! /bin/sh\n              # Return 0 if the process is alive, 1 otherwise\n              pgrep -f my‑service || exit 1\n          initialDelaySeconds: 30\n          periodSeconds: 12\n          timeoutSeconds: 3\n          failureThreshold: 2\n```\n\n---\n\n## 3️⃣ Tune the Timing Parameters\n\n| Parameter | What It Does | Typical “Story‑Friendly” Value |\n|-----------|--------------|--------------------------------|\n| **initialDelaySeconds** | Grace period before the first check (the pod’s warm‑up). | 10‑30 s for most web apps; 30‑60 s for heavy‑weight services. |\n| **periodSeconds** | How often the probe runs (the heartbeat rhythm). | 5‑15 s. Faster beats catch failures sooner but add a tiny load. |\n| **timeoutSeconds** | How long to wait for a response before calling it a miss. | 1‑3 s for HTTP/TCP; 2‑5 s for exec. |\n| **failureThreshold** | Number of consecutive misses before Kubernetes decides “this pod is dead”. | 3‑5. |\n| **successThreshold** | Number of consecutive successes required after a failure to consider the pod healthy again (rarely needed). | Usually 1. |\n\n**Pro tip:** Start with generous values (e.g., `initialDelaySeconds: 30`, `periodSeconds: 15`) and tighten them once you know the app’s startup time.\n\n---\n\n## 4️⃣ Validate the Pulse\n\n1. **Deploy** the manifest.  \n2. Run `kubectl get pods -w` to watch the pod’s status.  \n3. When you suspect a problem, inspect the events:\n\n   ```bash\n   kubectl describe pod <pod-name>\n   ```\n\n   Look for lines like `Liveness probe failed: Get http://...` and the restart count.\n\n4. If you see **flapping** (rapid restarts), increase `initialDelaySeconds` or `failureThreshold`.  \n5. If the pod never restarts despite being dead, check that the probe actually fails (e.g., curl the endpoint from inside the container).\n\n---\n\n## 5️⃣ Advanced Flairs (Optional)\n\n- **Multiple Probes:** You can have a **readiness** probe for traffic routing *and* a liveness probe for self‑healing. Keep them independent.\n- **Sidecar Guard:** If your main container can’t expose a health endpoint, spin up a tiny sidecar that runs a script and reports via HTTP.\n- **Graceful Shutdown:** Pair the liveness probe with a `preStop` hook that tells the app to finish in‑flight work before the container is killed.\n\n---\n\n## 6️⃣ TL;DR Cheat Sheet\n\n```yaml\nlivenessProbe:\n  httpGet:               # or tcpSocket / exec\n    path: /healthz\n    port: 8080\n  initialDelaySeconds: 20\n  periodSeconds: 10\n  timeoutSeconds: 2\n  failureThreshold: 3\n  successThreshold: 1\n```\n\nDrop that into any container spec, adjust the numbers to match your app’s personality, and Kubernetes will automatically restart the pod the moment its heartbeat goes flat.\n\n---\n\n**Now go forth and give your pods a pulse they can’t ignore!** 🚀🛰️",
+        "source_count": 0,
+        "first_token_ms": 660.4
+      }
+    },
+    {
+      "question": "What is the difference between liveness and readiness probes?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4082,
+        "context_size": 20,
+        "latency_ms": 76.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.15,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.2083,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.0645,
+        "citation_correctness": 0.0,
+        "answer": "Think of a container as a tiny restaurant kitchen inside a bustling food‑court.  \n\n**Liveness probe – “Is the kitchen still open?”**  \nThe liveness check is the fire‑marshal that walks by every few minutes and asks, “Is the stove still on? Is the power still flowing?” If the answer is “no,” the fire‑marshal pulls the emergency stop and the whole kitchen is shut down and rebuilt (the pod is restarted). The goal isn’t to judge how good the food is—just to make sure the kitchen isn’t dead, hung, or stuck in an endless loop. A failing liveness probe triggers a restart, because the system assumes the process is irrecoverably broken.\n\n**Readiness probe – “Is the kitchen ready to take orders?”**  \nThe readiness check is the maître d’ who decides whether the kitchen can actually serve customers right now. It might peek at the pantry, verify that the sauce is simmering, or confirm that the chef has finished the prep. As long as the kitchen says “yes,” the load‑balancer will route diners (traffic) to it. If the kitchen says “not yet” (perhaps it’s still warming up, loading data, or waiting for a dependent service), the pod stays alive but is taken off the menu. No restart happens; the container simply sits in a “stand‑by” state until it signals it’s ready.\n\n| Aspect | Liveness | Readiness |\n|--------|----------|-----------|\n| **Purpose** | Detect a dead or stuck container; trigger a restart. | Detect whether the container can accept traffic; gate traffic routing. |\n| **Effect of failure** | Kubelet kills and restarts the pod. | Pod stays running but is removed from service endpoints. |\n| **Typical use‑case** | Crash loops, deadlocks, unresponsive processes. | Warm‑up periods, dependency checks, temporary overload. |\n| **Typical implementation** | Simple HTTP 200, TCP socket open, or a short `exec` that returns 0/1. | More nuanced checks: health of a DB connection, presence of a file, successful init script, etc. |\n| **Timing** | Often starts after a short `initialDelaySeconds` and runs forever. | May start later (after the app has had time to boot) and can be toggled on/off as the app’s state changes. |\n\nIn practice you’ll often see both side‑by‑side: a quick liveness probe that just makes sure the process is still breathing, and a richer readiness probe that says, “Hey, I’m fully stocked and ready to serve!” This dual‑guard system lets Kubernetes keep the whole service humming—restarting the broken kitchens while never sending hungry customers to a kitchen that’s still prepping.",
+        "source_count": 0,
+        "first_token_ms": 677.6
+      }
+    },
+    {
+      "question": "Why does postgres autovacuum cause table bloat?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 15,
+        "latency_ms": 70.0,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.15,
+        "answer_relevancy": 0.5,
+        "token_f1": 0.0573,
+        "citation_correctness": 0.0,
+        "answer": "PostgreSQL’s autovacuum is a bit like a janitor that shows up every few hours with a broom and a dustpan. Its job is to sweep away the “dead” rows that accumulate whenever you UPDATE or DELETE data. In an ideal world the janitor is fast enough that the floor never gets cluttered, and the table stays lean and tidy.\n\nIn reality, however, the janitor has a limited budget of time and energy:\n\n1. **Cost‑limited cleaning** – Autovacuum is throttled by `autovacuum_vacuum_cost_limit` and `autovacuum_vacuum_cost_delay`. Those knobs tell it how many “vacuum credits” it can spend before it has to take a coffee break. If you have a table that’s being hammered with thousands of updates per second, the janitor will spend most of its day sipping coffee and only manage to sweep a tiny fraction of the debris.\n\n2. **Scale‑factor lag** – The `autovacuum_vacuum_scale_factor` tells PostgreSQL *when* to start cleaning (e.g., after 20 % of the rows have changed). If you’re constantly rewriting the same rows, the table can cross that threshold many times before the janitor even notices, because each new wave of updates resets the “dirty‑row counter” that triggers a new vacuum run.\n\n3. **Dead‑tuple accumulation** – Every UPDATE actually creates a new version of the row and marks the old version as dead. Those dead tuples sit in the table’s pages, taking up space but not contributing to any query results. As long as they’re not reclaimed, the table’s on‑disk size keeps growing even though the logical row count stays the same.\n\n4. **Fragmentation** – Even when autovacuum does run, it only marks dead tuples as reusable space; it doesn’t physically shrink the file. The pages stay where they are, and new rows get sprinkled into the gaps. Over time the table becomes a patchwork quilt of half‑filled pages, which is what we call “bloat.” The table’s physical size balloons while the amount of *useful* data stays flat.\n\n5. **Lock‑free but not lock‑free enough** – Autovacuum works without taking an exclusive lock, which is great for concurrency, but it also means it can’t move rows around to compact the file. The only way to truly shrink a bloated table is a `VACUUM FULL` (or a `CLUSTER`), which rewrites the whole thing under an exclusive lock. Because that lock is so disruptive, most DBAs avoid it in production, letting the bloat linger.\n\nSo, in short: autovacuum *does* reclaim space, but when it can’t keep up with a heavy churn of updates, the dead tuples pile up faster than the janitor can sweep them away. The table’s pages fill with unused slots, the file size inflates, and you end up with the dreaded “table bloat.” The cure is to tune the cost limits, lower the scale factor, or occasionally run a manual `VACUUM FULL` (or a partition‑swap trick) to give the table a good, deep clean.",
+        "source_count": 0,
+        "first_token_ms": 769.1
+      }
+    },
+    {
+      "question": "How can I detect that autovacuum is lagging behind?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2981,
+        "context_size": 14,
+        "latency_ms": 86.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.287,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.0337,
+        "citation_correctness": 0.0,
+        "answer": "### Spotting a Sluggish Autovacuum – A “Detective‑Style” Playbook\n\nThink of PostgreSQL’s autovacuum as a janitor that sweeps away the dust (dead tuples) while the office (your tables) stays busy. When the janitor can’t keep up, the floor gets sticky, performance slows, and you start seeing “vacuum lag.” Below is a step‑by‑step, slightly dramatized, guide to catching that lag in the act.\n\n---\n\n## 1. Install a “Surveillance Camera” on the Tables\n\n**What to watch:** The `pg_stat_user_tables` view is your CCTV feed. The column `n_dead_tup` tells you how many dead rows are hanging around.\n\n```sql\nSELECT\n    schemaname,\n    relname,\n    n_live_tup,\n    n_dead_tup,\n    last_autovacuum,\n    last_vacuum,\n    autovacuum_count,\n    vacuum_count\nFROM pg_stat_user_tables\nORDER BY n_dead_tup DESC\nLIMIT 20;\n```\n\n- **Red flag:** `n_dead_tup` is climbing faster than `n_live_tup` or the rate at which rows are inserted/updated.\n- **Quick sanity check:** If `last_autovacuum` is *NULL* or older than a few minutes on a hot table, the janitor hasn’t even shown up.\n\n---\n\n## 2. Compare “Dust Accumulation” vs. “Cleaning Speed”\n\n### a. Compute a “dead‑tuple growth rate”\n\n```sql\n-- Run this every minute (or whatever granularity you like) and store the result\nSELECT\n    now()               AS ts,\n    relid,\n    n_dead_tup\nFROM pg_stat_user_tables;\n```\n\nPlot `n_dead_tup` over time (Grafana, Prometheus, or even a simple spreadsheet). If the slope is positive and steep, the janitor is falling behind.\n\n### b. Measure the “vacuum throughput”\n\n```sql\nSELECT\n    pid,\n    relid,\n    phase,\n    heap_blks_total,\n    heap_blks_scanned,\n    heap_blks_vacuumed,\n    now() - query_start AS duration\nFROM pg_stat_progress_vacuum\nWHERE relid = (SELECT oid FROM pg_class WHERE relname = 'your_hot_table');\n```\n\n- **Key insight:** `heap_blks_scanned` vs. `heap_blks_vacuumed`. If the scanner is moving but the vacuumed count stalls, the process is throttled (cost‑limit, I/O contention, etc.).\n\n---\n\n## 3. Set Up an Alerting Rule\n\n**Prometheus example:**\n\n```yaml\n- alert: AutovacuumLagging\n  expr: increase(pg_stat_user_tables_n_dead_tup[5m]) > 0.1 * increase(pg_stat_user_tables_n_live_tup[5m])\n  for: 5m\n  labels:\n    severity: warning\n  annotations:\n    summary: \"Autovacuum lag on {{ $labels.relname }}\"\n    description: |\n      Dead tuples are growing faster than live tuples.\n      Last autovacuum: {{ $value | humanizeTimestamp }}.\n```\n\n- **Why the 0.10 factor?** It’s a rule‑of‑thumb: if dead rows are >10 % of the live‑row growth, you’re probably in trouble.\n\n---\n\n## 4. Listen to the “Janitor’s Diary” (Logs)\n\nEnable verbose autovacuum logging:\n\n```conf\nlog_autovacuum_min_duration = 0   # log every autovacuum run\nlog_autovacuum_verbose = on\n```\n\nNow grep for patterns like:\n\n```\nautovacuum: VACUUM public.my_big_table (to prevent wraparound)\n```\n\nIf you see long gaps between entries, or messages like “autovacuum: could not keep up with the rate of change,” you have a direct confession.\n\n---\n\n## 5. Cross‑Check with System‑Level Metrics\n\n- **CPU & I/O:** Autovacuum runs with a configurable cost limit. If the system is CPU‑starved, the cost limit may be throttling it. Look at `cpu_usage_user` for the `autovacuum` process in `pg_stat_activity`.\n- **Lock contention:** If you see many `AccessExclusiveLock` warnings in the logs, manual VACUUMs or long‑running transactions may be blocking the janitor.\n\n---\n\n## 6. “What‑If” Experiments (The Controlled Test)\n\n1. **Create a sandbox table** with a known update pattern:\n\n   ```sql\n   CREATE TABLE sandbox AS SELECT generate_series(1,1000000) AS id;\n   ```\n\n2. **Hammer it** with updates:\n\n   ```sql\n   UPDATE sandbox SET id = id + 1 WHERE id % 2 = 0;\n   ```\n\n3. **Watch the metrics** from steps 1‑3. If `n_dead_tup` spikes and the autovacuum never catches up, you’ve reproduced the lag in a safe environment.\n\n---\n\n## 7. Tune the Janitor’s Gearbox\n\nOnce you’ve confirmed lag, you can try a few “maintenance” actions:\n\n| Lever | What it does | Typical tweak |\n|------|--------------|---------------|\n| `autovacuum_vacuum_cost_limit` | Caps how much work a vacuum can do per second. Raise it to let the janitor work harder. | `2000` → `4000` |\n| `autovacuum_vacuum_scale_factor` | Determines the dead‑tuple threshold that triggers a vacuum. Lower it for aggressive cleaning. | `0.2` → `0.05` |\n| `autovacuum_max_workers` | Number of concurrent janitors. Add more if you have many hot tables. | `3` → `6` |\n| `maintenance_work_mem` | Memory per vacuum. Bigger = fewer passes. | `64MB` → `256MB` |\n\nAfter each change, re‑run the detection steps to see if the slope of `n_dead_tup` flattens.\n\n---\n\n## 8. A “One‑Liner” Cheat Sheet\n\nIf you just need a quick sanity check, run:\n\n```sql\nSELECT relname,\n       n_dead_tup,\n       pg_size_pretty(pg_total_relation_size(relid)) AS size,\n       now() - last_autovacuum AS since_last_vacuum\nFROM pg_stat_user_tables\nWHERE n_dead_tup > (0.2 * n_live_tup)   -- dead >20 % of live\n   OR now() - last_autovacuum > interval '10 minutes';\n```\n\nAny row returned is a candidate for “autovacuum lag.”\n\n---\n\n## 9. Visual Storyboard (Optional)\n\n- **Grafana Dashboard:**  \n  - Panel 1: `n_dead_tup` vs. time (line chart).  \n  - Panel 2: `autovacuum_progress` (gauge).  \n  - Panel 3: `autovacuum_workers` (bar).  \n  - Panel 4: Alert status.\n\nSeeing the dead‑tuple line climb while the progress gauge hovers near zero is the visual cue that the janitor is stuck in a hallway.\n\n---\n\n### TL;DR\n\n1. **Monitor `pg_stat_user_tables.n_dead_tup`** – growth = trouble.  \n2. **Correlate with `pg_stat_progress_vacuum`** – low vacuumed blocks = throttling.  \n3. **Set alerts** on dead‑tuple growth vs. live‑tuple growth.  \n4. **Enable verbose autovacuum logs** for direct evidence.  \n5. **Cross‑check system metrics** (CPU, I/O, locks).  \n6. **Tune cost limit, scale factor, workers, and memory** until the dead‑tuple curve flattens.\n\nFollow the steps, and you’ll catch the autovacuum lag before it turns your database into a dusty attic. Happy sleuthing!",
+        "source_count": 0,
+        "first_token_ms": 1134.4
+      }
+    },
+    {
+      "question": "What grind size should I use for espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3953,
+        "context_size": 16,
+        "latency_ms": 118.5,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.1529,
+        "citation_correctness": 0.0,
+        "answer": "For a true espresso, think “the texture of fine sea‑salt on a breezy beach.” Your grounds should be just barely gritty enough that a single fingertip can feel a whisper of resistance, but not so coarse that they slip through the portafilter like sand through a sieve. In practice this means grinding the beans to a consistency that resembles the granules you’d sprinkle on a caramel‑drizzled dessert—tiny, uniform, and just a touch powdery at the edges.\n\nA good rule of thumb is to aim for a particle size of roughly 200‑300 microns. If you press a pinch of the grounds between two sheets of parchment paper, you should be able to see a faint sheen of oil and feel a subtle “sandy‑smooth” texture. Anything coarser (think table pepper) will let water rush through too quickly, yielding a thin, sour shot, while anything finer (like powdered sugar) will choke the flow, over‑extracting and turning your espresso into a bitter, syrupy sludge.\n\nSo, set your grinder to its finest setting—often labeled “espresso” or “fine” on most machines—and then fine‑tune by turning the dial just a notch or two toward coarser if the shot drags, or a notch finer if it gushes out too fast. The sweet spot is that delicate balance where a 25‑second pull yields a thick, caramel‑colored crema that clings to the cup’s walls like a velvet curtain. Happy pulling!",
+        "source_count": 0,
+        "first_token_ms": 15702.3
+      }
+    },
+    {
+      "question": "How does cold brew grind differ from espresso?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4743,
+        "context_size": 14,
+        "latency_ms": 60.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.6667,
+        "token_f1": 0.0927,
+        "citation_correctness": 0.0,
+        "answer": "Think of coffee grounds as a crowd of tiny dancers.  \n\nWhen you’re making **cold‑brew**, you want the dancers to move slowly, lazily swaying in a long, cool ballroom. To give them room, you crush the beans only enough that each particle is about the size of a coarse sea‑salt crystal or even a tiny pebble. The result is a gritty, sand‑like texture that lets water seep through gently over twelve‑plus hours, coaxing out sweet, mellow notes without any rush.\n\nBy contrast, an **espresso** is a high‑energy flash‑mob. The water is hot, the pressure is fierce, and the performance lasts just 25‑30 seconds. To keep the crowd tight and the energy concentrated, you grind the beans down to a fine, powdery consistency—think the texture of table salt or even finer, almost like flour that still holds its shape. This fine grind creates a dense “puck” that forces the hot water through at 9‑bars of pressure, extracting bright, intense flavors in a heartbeat.\n\nSo, in short:  \n\n- **Cold‑brew grind** → coarse, sand‑like, giving water a leisurely stroll.  \n- **Espresso grind** → fine, almost powdery, forcing water through a rapid, high‑pressure sprint.  \n\nThe difference isn’t just size; it’s the whole vibe of the extraction—slow and mellow versus fast and punchy.",
+        "source_count": 0,
+        "first_token_ms": 10710.4
+      }
+    },
+    {
+      "question": "How does mortgage amortization work?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2,
+        "context_size": 11,
+        "latency_ms": 82.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2727,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.12,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.0625,
+        "citation_correctness": 0.0,
+        "answer": "Imagine a mortgage as a giant, slow‑burning candle that you’re trying to melt away, one tiny wax‑drip at a time. Each month you light a new wick (the payment) that does two things at once: it melts away a little of the wax that’s already been exposed (the interest) and it chips away at the solid core of the candle (the principal). The trick is that the candle’s shape changes as you go—early on there’s a lot of wax left, so the flame burns more of the “interest wax” and less of the “principal core.” As the candle gets smaller, the flame’s heat (your payment) stays the same, but now there’s less wax to melt, so more of that heat goes straight into shaving off the core.\n\nHere’s the step‑by‑step choreography:\n\n1. **Set the stage** – When you sign the loan, the lender tells you three numbers: the total amount you’re borrowing (the principal), the interest rate (the “heat” of the flame), and the length of the dance (the term, often 15 or 30 years). From those, they calculate a fixed monthly payment that will, if you never miss a beat, wipe the candle clean by the end of the term.\n\n2. **Split the payment** – Each month’s payment is divided into two slices:\n   * **Interest slice** – This is the cost of borrowing the money for that month. It’s calculated by taking the current principal balance, multiplying it by the annual interest rate, and then dividing by 12 (for months). Early on, because the balance is huge, this slice is big.\n   * **Principal slice** – Whatever is left over after the interest slice goes straight toward reducing the balance. As the balance shrinks, the interest slice shrinks, and the principal slice grows.\n\n3. **The amortization schedule** – Think of this as a detailed diary of every monthly payment. It lists the date, the total payment, how much of it is interest, how much is principal, and the new balance after each entry. If you flip through it, you’ll see a slow but steady tilt: the interest column starts tall and gradually tapers, while the principal column starts short and lengthens.\n\n4. **Why the early months feel “slow”** – Because the interest slice dominates, you’re mostly paying the lender for the privilege of borrowing, not actually chipping away at the debt. That’s why many people feel like they’re not making progress at first. But the math is designed so that by the time you’re halfway through the term, the principal slice has overtaken the interest slice, and you start seeing the balance drop faster.\n\n5. **Accelerating the payoff** – The schedule is a flexible script. If you toss an extra payment into the pot—say, a bonus, a tax refund, or an “extra‑one‑month‑payment‑per‑year” trick—you’re essentially adding a burst of heat that melts a larger chunk of the core right away. That reduces the balance, which in turn shrinks the interest slice for every future payment, letting you finish the candle years earlier and save a bundle of interest.\n\n6. **The endgame** – By the final month, the balance is so tiny that the interest slice is almost negligible. Your last payment is mostly principal, and the candle finally goes out—no more payments, no more interest, just the sweet satisfaction of having owned the house outright.\n\nIn a nutshell, mortgage amortization is a carefully choreographed dance between interest (the cost of borrowing) and principal (the actual debt). The fixed monthly rhythm stays the same, but the balance of the two partners shifts over time, gradually turning your payments from “paying the bank” into “building your equity.” And if you ever want to speed up the waltz, just add an extra step (extra payment) and watch the balance shrink faster than the schedule originally imagined.",
+        "source_count": 0,
+        "first_token_ms": 5749.1
+      }
+    },
+    {
+      "question": "How can I pay off a thirty-year mortgage faster?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2936,
+        "context_size": 12,
+        "latency_ms": 74.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0517,
+        "answer_relevancy": 0.8333,
+        "token_f1": 0.0388,
+        "citation_correctness": 0.0,
+        "answer": "### Turbo‑Charging Your 30‑Year Mortgage\n\nThink of your mortgage as a long‑distance marathon. You’ve got the stamina to finish, but a few strategic shortcuts can shave weeks, months—or even years—off the race. Below are a handful of “speed‑up” tactics, each illustrated with a vivid metaphor so you can picture how the money moves.\n\n---\n\n#### 1. **Bi‑Weekly Beat (The “Half‑Step” Shuffle)**\nInstead of a single monthly payment, split it in half and pay every two weeks.  \n- **Why it works:** 26 half‑payments = 13 full payments each year, giving you an extra month’s worth of principal reduction for free.  \n- **Creative spin:** Imagine your mortgage as a river; each bi‑weekly drop creates a tiny dam that slows the flow, eventually forcing the river to recede faster.\n\n#### 2. **The “One‑Extra‑Month” Sprint (Annual Bonus Attack)**\nTake any windfall—tax refund, bonus, or even a modest holiday gift—and throw it straight at the principal once a year.  \n- **Result:** The principal shrinks instantly, and every future interest calculation starts from a lower base.  \n- **Tip:** Set up an automatic “extra‑payment” rule in your bank so the money flies out the moment it lands in your account.\n\n#### 3. **Lump‑Sum Lightning (The “Snowball” Method)**\nEvery few months, gather spare cash (side‑gig earnings, a garage‑sale haul, or a “no‑spend” challenge surplus) and make a lump‑sum payment.  \n- **Impact:** Large chunks of principal disappear, and the interest saved compounds like a snowball rolling downhill—bigger and faster with each roll.\n\n#### 4. **Refi‑Rocket (Lower‑Rate Re‑Launch)**\nIf rates have dipped since you signed, refinance to a shorter term (e.g., 20‑year) or a lower interest rate.  \n- **Result:** Even a modest 0.5% rate drop can shave years off the schedule and save tens of thousands in interest.  \n- **Pro tip:** Look for “no‑cost” refinance offers where the lender covers closing fees—your net cash outlay stays the same, but the timeline compresses.\n\n#### 5. **Income‑Boost Blitz (Side‑Hustle Surge)**\nTurn a hobby into cash: freelance writing, tutoring, pet‑sitting, or selling handcrafted goods. Direct every extra dollar to the mortgage.  \n- **Visualization:** Picture each side‑hustle paycheck as a “rocket booster” attached to your mortgage; the more boosters, the quicker you break free of gravity.\n\n#### 6. **Expense‑Trim Tactics (Weight‑Loss for Your Budget)**\nTrim the fat in your monthly budget—streaming subscriptions, dining out, or that pricey gym you never use. Redirect the saved amount to the loan.  \n- **Creative analogy:** Think of your budget as a backpack; the lighter it gets, the faster you can sprint up the hill (i.e., pay down the loan).\n\n#### 7. **Mortgage‑Acceleration Apps (Digital Trainers)**\nThere are apps that automatically calculate the optimal extra‑payment schedule and even pull money from a linked checking account on payday.  \n- **Benefit:** Automation removes the “I’ll remember later” excuse and keeps the acceleration train on track.\n\n#### 8. **“Round‑Up” Routine (The Penny‑Drop Method)**\nSet your checking account to round every purchase up to the nearest dollar and funnel the difference into a dedicated mortgage‑payoff account.  \n- **Result:** Those tiny “spare change” deposits add up—often to a few hundred dollars a year—without feeling like a sacrifice.\n\n#### 9. **Strategic “Mortgage‑Only” Savings (The “Rain‑Barrel”)**\nOpen a high‑yield savings account labeled “Mortgage Fund.” Whenever you get a raise, deposit the extra percentage (e.g., 5% of the raise) there, then transfer it to the loan.  \n- **Psychology hack:** Seeing the balance grow in a separate pot makes the eventual lump‑sum payment feel like a victory celebration.\n\n#### 10. **Early‑Payoff Penalty Check (Read the Fine Print)**\nBefore you go full throttle, verify whether your loan has prepayment penalties. If it does, calculate whether the penalty cost outweighs the interest you’d save.  \n- **Workaround:** Some lenders allow a “partial prepayment” without penalty up to a certain percentage each year—use that sweet spot.\n\n---\n\n### Putting It All Together: A Sample 5‑Year Plan\n\n| Month | Action | Extra Amount | Cumulative Principal Reduction |\n|------|--------|--------------|--------------------------------|\n| Jan  | Bi‑weekly payments start | +$500 (2×) | $1,000 |\n| Mar  | Tax refund (bonus) | +$3,000 | $4,000 |\n| Jun  | Side‑hustle earnings | +$1,200 | $5,200 |\n| Sep  | Round‑up fund transfer | +$250 | $5,450 |\n| Dec  | Lump‑sum from holiday sales | +$2,000 | $7,450 |\n\n*Result:* In the first year you’ve knocked off roughly $7.5 k of principal—equivalent to shaving off about 4–5 months of the original schedule. Replicate and scale each year, and you could be mortgage‑free in 15–18 years instead of 30.\n\n---\n\n### Quick‑Start Checklist\n\n1. **Set up bi‑weekly payments** (or ask your lender to split them).  \n2. **Create an “extra‑payment” line item** in your budgeting app.  \n3. **Automate a monthly “round‑up” transfer** to a mortgage‑only savings account.  \n4. **Schedule a yearly review** of rates and prepayment penalties.  \n5. **Celebrate each milestone** (e.g., “First $10k extra paid!”) to stay motivated.\n\n---\n\n**Bottom line:** The fastest way to beat a 30‑year mortgage isn’t a single magic trick; it’s a series of small, consistent accelerations—like a cyclist shifting gears and pedaling harder at just the right moments. Pick the tactics that fit your lifestyle, automate what you can, and watch the loan term shrink before you know it. Happy accelerating!",
+        "source_count": 0,
+        "first_token_ms": 9864.1
+      }
+    },
+    {
+      "question": "What is a nebula?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4867,
+        "context_size": 18,
+        "latency_ms": 68.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1111,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.1111,
+        "citation_correctness": 0.0,
+        "answer": "A nebula is the universe’s own watercolor masterpiece—a sprawling, luminous cloud of gas, dust, and stardust that drifts through the cosmic void like a celestial fog bank. Imagine a vast, billowing tapestry woven from hydrogen, helium, and specks of heavier elements, all illuminated by the faint glow of newborn stars or the eerie back‑light of distant galaxies.  \n\nThese interstellar clouds come in many flavors:\n\n* **Stellar nurseries** – dense, dark pockets where gravity gathers the material into tight knots, eventually igniting the first sparks of a new star. Think of a cosmic womb, warm and humming with the promise of light.  \n* **Ghostly remnants** – the ethereal shrouds left behind when a massive star blows its outer layers into space, scattering enriched material that will later seed future generations of stars and planets.  \n* **Radiant veils** – glowing curtains of ionized gas that sparkle in vivid reds, blues, and greens, painted by the ultraviolet fire of nearby hot stars.\n\nBecause they’re made of both gas and dust, nebulae can appear as delicate, translucent veils or as thick, opaque silhouettes that block the light behind them. Some look like fluffy cotton candy, others like intricate lace, and a few even take on the shape of mythic creatures when viewed through powerful telescopes.\n\nIn short, a nebula is the universe’s ever‑changing cloudscape—a place where the raw ingredients of creation swirl together, waiting for gravity’s gentle nudge to turn clouds into suns, planets, and, eventually, the building blocks of life itself.",
+        "source_count": 0,
+        "first_token_ms": 13728.5
+      }
+    },
+    {
+      "question": "What conditions are needed to observe galaxies?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.1952,
+        "context_size": 18,
+        "latency_ms": 75.3,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0909,
+        "context_precision": 0.1667,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0408,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.0413,
+        "citation_correctness": 0.0,
+        "answer": "**Peering into the grand tapestry of distant galaxies isn’t just a matter of pointing a lens skyward – it’s a ritual that blends the right environment, equipment, and a dash of patience.** Below is a “checklist of cosmic conditions” that will give you the best chance to catch those swirling islands of stars in all their glory.\n\n---\n\n### 1. **A Sky That’s Darker Than a Moonless Night in the Sahara**\n- **Light‑pollution index < 2 mag/arcsec²** – Think of a place far from city glow, where the Milky Way looks like a luminous river. Rural high‑desert sites, remote islands, or mountaintop observatories are ideal.\n- **No Moon (or a thin crescent)** – Even a sliver can wash out the faint outer halos of galaxies. Aim for the days around new moon, or use a lunar‑avoidance schedule.\n\n### 2. **Atmospheric Clarity & Stability**\n- **Seeing < 1.5 arcseconds** – Stable air layers (low turbulence) keep the image sharp. High‑altitude sites (≥ 2 000 m) often have thinner, steadier air.\n- **Low humidity & transparency** – Dry, clear nights reduce scattering and absorption, letting more photons from distant galaxies reach your sensor.\n\n### 3. **A Telescope With Sufficient “Gathering Power”**\n- **Aperture ≥ 8‑inch (200 mm) for casual observers** – This size starts to resolve the brighter cores of nearby spirals (e.g., M31, M51).  \n- **≥ 14‑inch (350 mm) for deep‑sky work** – Larger mirrors or lenses collect enough light to reveal faint arms, dust lanes, and low‑surface‑brightness companions.\n- **Fast focal ratio (f/4‑f/6)** – A “fast” scope shortens exposure times, making it easier to capture faint structures without sky‑glow overwhelming the image.\n\n### 4. **A Sensitive Imaging System**\n- **Monochrome CCD/CMOS with low read noise** – These detectors excel at pulling out the subtle glow of galaxy outskirts.\n- **Cooling (‑10 °C or lower)** – Keeps thermal noise down during long exposures (often 5‑30 minutes per frame).\n- **Broadband filters (Luminance) + narrowband (H‑α, O‑III) for specific features** – The latter can highlight star‑forming regions or ionized gas clouds within galaxies.\n\n### 5. **Accurate Tracking & Guiding**\n- **Equatorial mount with periodic error correction** – Keeps the stars (and galaxies) locked on the same pixels for minutes‑long exposures.\n- **Autoguiding camera** – Monitors a guide star and makes micro‑adjustments in real time, preventing star trails that would smear the galaxy’s faint halo.\n\n### 6. **Dark‑Adapted Vision (If You’re Going Visual)**\n- **30‑minute dark‑adaptation** – Your eyes become up to 10× more sensitive after half an hour in total darkness.\n- **Averted‑glance technique** – Look just off the galaxy’s core; the peripheral retina is more sensitive to low‑light detail.\n\n### 7. **Timing & Location of the Target**\n- **High elevation above the horizon** – Observe when the galaxy is near its highest point (culmination) to minimize atmospheric thickness.\n- **Seasonal windows** – Some spectacular galaxies (e.g., the Sombrero, M104) are only visible during certain months; plan your sessions accordingly.\n\n### 8. **Patience & Post‑Processing**\n- **Stack multiple exposures** – Align and combine dozens of frames to boost signal‑to‑noise while rejecting cosmic rays and satellite trails.\n- **Calibration frames (dark, bias, flat)** – Clean up sensor artifacts and vignetting, revealing the galaxy’s true structure.\n\n---\n\n#### **A “Dream Night” Scenario**\n\nImagine you’re perched on a 2,500‑meter plateau in the Chilean Andes, far from any town lights. The air is crisp, the temperature drops to 5 °C, and the sky is a deep, inky black. Your 16‑inch f/5 Newtonian sits on a precision German equatorial mount, feeding a cooled monochrome camera. After a 30‑minute dark‑adaptation, you point at the Andromeda Galaxy (M31) as it climbs to 70° above the horizon. With a series of 10‑minute exposures, guided by a bright nearby star, you later stack the frames and reveal not only Andromeda’s bright core but also its faint outer halo, dwarf companions, and the delicate dust lanes that would be invisible to the naked eye.\n\n---\n\n### Quick Checklist (Copy‑Paste)\n\n- ☐ Dark site (Bortle 1‑3)  \n- ☐ New moon / thin crescent  \n- ☐ Seeing < 1.5″, low humidity  \n- ☐ Aperture ≥ 8″ (≥ 14″ for deep work)  \n- ☐ Fast focal ratio (f/4‑f/6)  \n- ☐ Cooled monochrome camera + appropriate filters  \n- ☐ Equatorial mount with autoguiding  \n- ☐ 30‑min dark‑adapted eyes (if visual)  \n- ☐ Target high in the sky, seasonally optimal  \n- ☐ Stack & calibrate images  \n\nFollow these conditions, and the universe will reward you with the faint, majestic glow of galaxies far beyond our own Milky Way. Happy hunting!",
+        "source_count": 0,
+        "first_token_ms": 4828.9
+      }
+    },
+    {
+      "question": "How should I balance a compost pile?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3152,
+        "context_size": 12,
+        "latency_ms": 77.2,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.25,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0615,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.0431,
+        "citation_correctness": 0.0,
+        "answer": "**The Art of a Well‑Balanced Compost Symphony**\n\nThink of your compost pile as a living orchestra. Each ingredient is an instrument, each layer a musical phrase, and the whole thing needs the right tempo, harmony, and a dash of drama to turn kitchen scraps into black gold. Here’s a step‑by‑step “score” you can follow, with a few imaginative twists to keep things lively.\n\n---\n\n### 1. Set the Stage – Choose Your “Venue”\n- **Location:** A sunny corner of the garden (or a shady spot if you live in a desert) works best. The spot should be accessible for turning, yet out of the way enough that neighbors don’t mistake it for a smelly swamp.\n- **Container:** A simple wooden bin, a wire cage, or even a “compost castle” built from reclaimed pallets. The key is good airflow and a size that lets you add material without it spilling over.\n\n### 2. The Core Rhythm – Green vs. Brown (Nitrogen vs. Carbon)\n- **Green (the high‑energy percussion):** Fresh kitchen scraps, coffee grounds, grass clippings, and herb stems. These are the “fast‑acting” notes that spark microbial fireworks.\n- **Brown (the deep, resonant bass):** Dried leaves, shredded newspaper, straw, cardboard, and sawdust. They provide structure, absorb excess moisture, and keep the pile from turning into a soggy mess.\n\n**Rule of thumb:** Aim for roughly **1 part green to 2–3 parts brown** by volume. If you picture a sandwich, the greens are the filling, the browns are the bread that holds everything together.\n\n### 3. Build the “Movement” – Layering Technique\n1. **Foundation (Bass Line):** Start with a 4‑inch layer of coarse brown material. This creates a breathable base and prevents the pile from sitting on a damp floor.\n2. **First Verse (Melody):** Add a 2‑inch layer of greens. Sprinkle a pinch of garden soil or finished compost on top – this introduces the “conductors” (microbes) that will kick off the performance.\n3. **Chorus (Harmony):** Cover the greens with another 4‑inch brown layer. Lightly mist with water until the mixture feels like a wrung‑out sponge.\n4. **Repeat:** Continue alternating, ending with a brown cap. The topmost layer acts like a protective lid, keeping rain out and retaining heat.\n\n### 4. The Tempo – Moisture & Aeration\n- **Moisture:** Aim for the “squeeze test.” Grab a handful and give it a firm squeeze; a few drops should escape, but it shouldn’t feel soggy. Too dry and the microbes go into a nap; too wet and they drown.\n- **Airflow:** Every week or two, give the pile a gentle turn with a pitchfork or compost aerator. Think of it as a conductor waving the baton, ensuring every section gets its moment in the spotlight.\n\n### 5. Temperature – The “Heat of the Moment”\nA healthy pile will heat up to **130–150 °F (55–65 °C)** within a few days. This is the climax where weed seeds and pathogens are toasted out. If the temperature spikes too high, toss in more brown material; if it stays lukewarm, add more greens and a splash of water.\n\n### 6. The Encore – Finishing Touches\n- **Maturity Test:** When the pile looks dark, crumbly, and smells earthy (no sour or ammonia notes), it’s ready. You can dig a small “tasting” sample; it should feel like rich soil.\n- **Sift & Use:** Pass the finished compost through a coarse screen to separate any lingering sticks or large pieces. The fine, dark material is your prize—perfect for top‑dressing beds, mixing into potting mixes, or sprinkling around seedlings.\n\n---\n\n## A Few Creative “Cheat Codes”\n\n| Situation | Imaginative Fix |\n|-----------|-----------------|\n| **Odor Alert** | Sprinkle a handful of dried lavender buds or crushed chalk. The aromatic oils mask smells, while the chalk balances pH. |\n| **Too Wet** | Toss in shredded newspaper, pine needles, or even a few old coffee filters. They act like tiny sponges that soak up excess water. |\n| **Too Dry** | Add a splash of rainwater, a few banana peels, or a handful of fresh grass clippings. The extra moisture revives the microbial chorus. |\n| **Pest Intrusion** | Lay a thin sheet of copper mesh or a layer of crushed eggshells on top. Many critters dislike the texture and the calcium helps neutralize acidity. |\n| **Speed Boost** | Introduce a “starter culture” – a scoop of mature compost, a handful of garden soil, or even a commercial compost inoculant. It’s like adding a virtuoso soloist to accelerate the performance. |\n\n---\n\n### Quick Checklist (Your Compost Conductor’s Score)\n\n- ☐ Choose sunny/shady spot & appropriate container  \n- ☐ Lay 4‑inch brown base  \n- ☐ Add 2‑inch green layer + sprinkle soil/compost  \n- ☐ Cover with 4‑inch brown layer, mist to damp  \n- ☐ Repeat, ending with brown cap  \n- ☐ Keep moisture like a wrung‑out sponge  \n- ☐ Turn weekly (or when you hear the “whoosh” of escaping gases)  \n- ☐ Monitor temperature; adjust greens/browns as needed  \n- ☐ Test for maturity, sift, and apply  \n\n---\n\n**Final Thought:** Composting isn’t just a science; it’s a living, breathing art. Treat each addition as a note, each turn as a crescendo, and soon you’ll have a masterpiece that feeds your garden, your plants, and your imagination. Happy composting!",
+        "source_count": 0,
+        "first_token_ms": 10758.8
+      }
+    },
+    {
+      "question": "How hot does a compost heap get?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3941,
+        "context_size": 13,
+        "latency_ms": 81.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.1029,
+        "citation_correctness": 0.0,
+        "answer": "A thriving compost heap is basically a little furnace of nature. In the heart of a well‑managed pile the temperature can climb anywhere from the low‑90s °F (about 33 °C) up to the mid‑140s °F (around 60–65 °C). In the most vigorous, moisture‑balanced heaps you’ll sometimes even see brief spikes into the 150 °F (≈ 65 °C) range before the microbes start to cool things down.\n\nThose heat surges happen because the microscopic army of bacteria, fungi, and actinomycetes are feasting on the fresh greens and browns you’ve tossed in. As they break down the organic matter, they generate metabolic heat—much like a marathon runner’s body temperature rises during a race. If you keep the pile big enough (at least three feet across in each dimension), keep it moist but not soggy, and turn it every week or so, the core stays hot enough to kill most weed seeds and pesky pathogens while speeding up the breakdown of tough cellulose.\n\nSo, in short: expect a hot compost heap to hover around 120–140 °F (≈ 50–60 °C) in its prime, with occasional hotter bursts if conditions are just right.",
+        "source_count": 0,
+        "first_token_ms": 10935.0
+      }
+    },
+    {
+      "question": "What are Python type hints used for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 83.9,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.0664,
+        "citation_correctness": 0.0,
+        "answer": "Think of Python type hints as the little “road signs” you sprinkle along the winding highways of your code. They don’t change how the program actually drives, but they give a map to anyone (or anything) that wants to understand the route before the car even starts moving.\n\n- **Catching potholes before you hit them** – Static checkers like mypy, pyright, or the built‑in pyright‑language‑server can read those signs and warn you when you’re trying to pour a string into a function that only drinks integers. It’s a pre‑flight safety net that saves you from the dreaded “type‑error at runtime” crash.\n\n- **Guiding the GPS of your IDE** – Modern editors (VS Code, PyCharm, Emacs with LSP) read the hints and instantly know what arguments a function expects, what it returns, and even what attributes a custom object carries. That’s why you get those buttery‑smooth autocompletions and inline documentation without ever opening a separate doc page.\n\n- **Writing a better travel brochure** – When you glance at a function definition that says `def fetch_user(id: int) -> User:`, you instantly know the contract: give it an int, expect a User object. No need to dig through docstrings or run the code to figure it out.\n\n- **Enabling smarter refactors** – Because the type system knows the shape of your data, tools can safely rename variables, extract methods, or even suggest more efficient algorithms while preserving correctness.\n\n- **Bridging to other worlds** – Some frameworks (FastAPI, Pydantic, Django‑stubs) use the hints to auto‑generate OpenAPI specs, validation layers, or database schemas. In those cases, the hints become the glue that turns a plain Python function into a fully‑fledged web endpoint or a validated data model.\n\n- **Optional, not mandatory** – The beauty is that you can sprinkle a few hints here and there, or go full‑on with generics, Protocols, and TypedDicts for a near‑static‑typed experience. Python will still run exactly the same; the hints are purely for the eyes of the tools and the developers.\n\nIn short, Python type hints are the silent traffic controllers that keep your code’s flow smooth, your collaborators informed, and your tooling empowered—without ever forcing you to change the way Python actually executes. 🚦✨",
+        "source_count": 0,
+        "first_token_ms": 10724.5
+      }
+    },
+    {
+      "question": "When should I use Protocol and TypeVar in Python?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4042,
+        "context_size": 14,
+        "latency_ms": 59.6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0556,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.019,
+        "citation_correctness": 0.0,
+        "answer": "### The “When”‑Map for Protocols and TypeVars  \n*(A whimsical guide for the Python‑craftsman)*  \n\n| Situation | Protocol – Why & How | TypeVar – Why & How |\n|-----------|----------------------|----------------------|\n| **You’re building a toolbox that works with any “shape” of object** | Think of a Protocol as a **silhouette** on a wall. Any object that casts that silhouette—whether it’s a `str`, a custom `User`, or a mischievous `Mock`—can walk through the door. Use a Protocol when you care **only about the methods/attributes** an object provides, not its inheritance tree. | A TypeVar is your **color‑coded thread** that weaves through the fabric of a generic function or class. When you need the same piece of logic to handle *any* type, but you still want the type‑checker to remember “all the pieces are the same color,” reach for a TypeVar. |\n| **You’re writing a library that should feel “duck‑typed” but still get static‑type love** | Protocols let you **declare the duck‑type contract** once, then let any duck (or goose) that quacks correctly be accepted. Perfect for “file‑like” objects, “iterator‑like” streams, or “shape‑like” graphics objects. | TypeVars let you **parameterize** that contract: a `Reader[T]` that returns whatever type `T` you fed it, a `Tree[T]` that stores nodes of a single consistent type, or a `Cache[K, V]` that ties keys and values together. |\n| **Your code is a “pipeline” where each stage must agree on the same type** | Use a Protocol to **pin down the required methods** of each stage (e.g., `process(self, data: Data) -> Result`). The pipeline can then be assembled from any components that satisfy the protocol, even if they come from different libraries. | Pair the Protocol with a TypeVar: `class Stage(Protocol[T_co]):\\n    def process(self, data: T_co) -> T_co: ...`. Now the pipeline knows that the output type of one stage matches the input type of the next, and mypy can verify the chain. |\n| **You’re dealing with “covariant” or “contravariant” relationships** | Protocols can be **marked as covariant** (`Protocol[CovT]`) so that a `Sequence[Dog]` can be used where a `Sequence[Animal]` is expected. Use this when the protocol only *produces* values of the type variable. | TypeVars let you **declare variance** (`TypeVar('T', covariant=True)`). This is essential when you want a generic container to be safely substitutable (e.g., a read‑only view of a list). |\n| **You need a quick, one‑off “structural” check without polluting the inheritance hierarchy** | Write an **inline Protocol** inside the function signature: `def render(item: Protocol[__getitem__: Callable[[int], str]]): ...`. No need to create a base class; the type‑checker just looks at the shape. | Use a **bounded TypeVar** (`T = TypeVar('T', bound=BaseModel)`) when you want “any subclass of X, but still keep the exact subclass identity.” Great for factories that return the concrete subclass they were given. |\n| **Your code lives in a world of “plugins” that can be swapped at runtime** | Define a **PluginProtocol** that lists the hooks (`initialize`, `run`, `shutdown`). Any third‑party plugin that implements those methods will be accepted, even if it never imported your base class. | Parameterize the plugin system: `Plugin[TConfig]` where `TConfig = TypeVar('TConfig', bound=ConfigBase)`. This way each plugin can bring its own config schema while the host still knows the config type is consistent. |\n| **You’re writing a data‑science library that must stay generic over NumPy, PyTorch, JAX, etc.** | A `TensorProtocol` that requires `shape`, `dtype`, and `__add__` lets you accept any tensor‑like object, regardless of the underlying library. | A `ScalarT = TypeVar('ScalarT', int, float, np.float64, torch.Tensor)` lets you annotate functions that can return *any* of those scalar flavors while preserving the exact type for downstream type checking. |\n| **You’re debugging a mysterious type‑error and need a “type‑lens”** | Slip a temporary Protocol into the signature to **force the checker to surface the missing attribute**. It’s like shining a flashlight on the part of the object that’s invisible to the current type. | Replace a concrete type with a TypeVar and add a `bound=` or `constraints=` to see which concrete types satisfy the constraints. The error messages become a map of the possible culprits. |\n\n---\n\n## A Short Story to Cement the Idea  \n\n> **The Tale of the Shape‑Shifting Blacksmith**  \n> \n> In the kingdom of **Typia**, the royal blacksmith, **Sir Protocol**, forged tools not by the metal’s lineage but by the **shape of the handle**. Any hammer that had a `strike()` method could be used, whether it was forged from iron, mithril, or dragon‑bone. The kingdom loved Sir Protocol because his workshop never needed to know the exact ancestry of a tool—just that it could **strike**.  \n> \n> Meanwhile, the court wizard, **Lady TypeVar**, loved **patterns**. She would weave a single thread of magic (`T`) through a spell, and that spell could be cast on any creature that matched the thread’s color. When she needed a spell that worked on **any** kind of beast, she wrote `def heal[T](creature: T) -> T: …`. The spell returned the same type it received, preserving the creature’s identity while still being generic.  \n> \n> One day, the king demanded a **pipeline** that could **forge → temper → polish** any weapon. Sir Protocol defined the *shape* each stage must accept (`has a `process(item) -> item``). Lady TypeVar tied the knot, ensuring the same `WeaponT` traveled through all three stages. The result? A seamless, type‑safe assembly line that accepted swords, axes, or even enchanted staffs, without ever breaking a single type‑check.  \n\nWhen you hear the clang of a **Protocol** or the hum of a **TypeVar**, think of that blacksmith and wizard: one cares about *what* an object can do, the other cares about *what* it *is* across the whole program.\n\n---\n\n## Quick‑Start Cheat Sheet  \n\n```python\n# 1️⃣ Protocol for duck‑typing\nfrom typing import Protocol\n\nclass SupportsWrite(Protocol):\n    def write(self, data: bytes) -> int: ...\n\ndef dump(stream: SupportsWrite, payload: bytes) -> int:\n    return stream.write(payload)\n\n# 2️⃣ TypeVar for generics\nfrom typing import TypeVar, Iterable, List\n\nT = TypeVar('T')\n\ndef flatten(items: Iterable[Iterable[T]]) -> List[T]:\n    return [elem for sub in items for elem in sub]\n\n# 3️⃣ Combine both (covariant example)\nU = TypeVar('U', covariant=True)\n\nclass Reader(Protocol[U]):\n    def read(self) -> U: ...\n\ndef echo(reader: Reader[str]) -> str:\n    return reader.read()\n```\n\n- **Use a Protocol** when you only need to guarantee the presence of certain members.\n- **Use a TypeVar** when you need a placeholder for “any type” that stays consistent across inputs/outputs.\n- **Mix them** when you want a generic contract that also enforces a shape.\n\n---\n\n### TL;DR  \n\n- **Protocol** = “any object that looks like this.” Perfect for structural subtyping, plugin APIs, and duck‑typed contracts.  \n- **TypeVar** = “any type, but keep it the same.” Perfect for generic containers, factories, and functions that must preserve type identity.  \n\nDeploy them together, and you’ll have a codebase that feels as flexible as a shape‑shifting blacksmith’s forge while still enjoying the safety of a wizard’s spell‑binding type system. Happy typing!",
+        "source_count": 0,
+        "first_token_ms": 4773.1
+      }
+    },
+    {
+      "question": "Why are docker image layers cached?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.6301,
+        "context_size": 13,
+        "latency_ms": 62.3,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.08,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.0541,
+        "citation_correctness": 0.0,
+        "answer": "Think of a Docker image as a giant, multi‑layered sandwich. Each slice—your base OS, a set of libraries, your application code, the final configuration—gets assembled one after the other. When you first build that sandwich, the kitchen staff (Docker) has to slice the bread, spread the mayo, lay down the cheese, and so on. That takes time.\n\nNow imagine you’re a chef who makes the same sandwich every day, but only the topmost slice changes (maybe you add a new topping or swap the sauce). It would be absurd to start from scratch each time, right? Instead, you keep the already‑prepared slices in a refrigerated drawer, ready to be reused. That’s exactly what Docker does with layers: it stores each “slice” in a local cache (and often in remote registries) the moment it’s built.\n\nHere’s why that caching is such a clever trick:\n\n1. **Speed that feels like magic** – When you tweak only the last line of a Dockerfile, Docker can pull the pre‑cooked layers straight out of the cache, rebuilding only the new slice. What used to take minutes now finishes in seconds, letting you iterate on code as fast as you can type.\n\n2. **Economy of bandwidth and storage** – Layers are immutable blobs. If ten different images all need the same Ubuntu base, they all point to the same cached layer. You only download or store that base once, saving both network traffic and disk space.\n\n3. **Deterministic reproducibility** – Because each layer is a checksum‑identified snapshot, Docker can guarantee that “layer 3” is always exactly the same, no matter which image later references it. This makes debugging easier: you know the problem lives in the layer that actually changed.\n\n4. **Parallel cooking stations** – In a CI/CD pipeline, multiple builds can run side‑by‑side, each pulling from the shared cache. It’s like a communal pantry where every chef grabs the ingredients they need without waiting for the other to finish.\n\n5. **Safety net for rollbacks** – If a new build turns out to be buggy, you can roll back to the previous image instantly because the underlying layers are still cached and untouched. The only thing you discard is the faulty top layer.\n\n6. **Layer‑level reuse across projects** – A popular language runtime (say, Node 18) becomes a reusable layer for any Node‑based project. Teams can share that layer across repositories, turning a once‑expensive compile step into a one‑time cost.\n\nIn short, Docker caches layers because it treats each layer as a reusable building block—just like a chef keeps pre‑made dough, sauces, and toppings on hand. By re‑using those blocks, you get faster builds, smaller downloads, easier debugging, and a more pleasant developer experience. It’s the culinary art of containerization: prep once, serve many times.",
+        "source_count": 0,
+        "first_token_ms": 16801.9
+      }
+    },
+    {
+      "question": "What are multi-stage docker builds for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.275,
+        "context_size": 14,
+        "latency_ms": 63.4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0952,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.0791,
+        "citation_correctness": 0.0,
+        "answer": "Think of a Dockerfile as a kitchen where you’re cooking up a complex dish. In a single‑stage kitchen you’d have the stove, the blender, the deep‑fryer, the spice rack, and the serving plates all in one cramped space. By the time the meal is ready, you’ve left behind a mess of oil splatters, burnt‑on bits, and a whole lot of equipment you don’t need on the table.  \n\nMulti‑stage Docker builds are the culinary equivalent of moving the prep work to a separate, disposable kitchen and then only bringing the finished plate to the dining room. You write a series of “stages” in your Dockerfile:\n\n1. **Builder stage** – Here you install compilers, package managers, and all the noisy tools you need to compile code, transpile assets, or run tests. This stage can be as heavyweight as a full‑blown Ubuntu with a mountain of build‑time dependencies.\n\n2. **Intermediate stage(s)** – If you have multiple steps (e.g., compile, then minify, then bundle), you can chain them together, each stage taking the output of the previous one and refining it further.\n\n3. **Final stage** – This is the pristine, minimalist kitchen where you only install the runtime libraries your app actually needs. You copy the polished artifact (binary, JAR, static site, etc.) from the previous stage(s) and discard the rest.\n\nThe benefits are more than just tidy housekeeping:\n\n- **Slim images** – By shedding the build tools, your final image can shrink from hundreds of megabytes to a few dozen, which means faster pulls, lower storage costs, and quicker deployments.\n- **Security hardening** – Fewer packages mean a smaller attack surface. No compilers, no unnecessary shells, no lingering credentials.\n- **Reproducibility** – Each stage is cached independently. If you only change a source file, Docker can reuse the earlier “install‑dependencies” layer and only rebuild the parts that actually changed, speeding up iteration.\n- **Separation of concerns** – Teams can own different stages: a “devops” crew maintains the builder image, while a “runtime” crew focuses on the lean production base.\n- **Cross‑language mash‑ups** – Want to compile a Go binary, then bundle it with a Node.js front‑end? One stage can use the Go toolchain, the next can use Node, and the final stage can be a tiny Alpine or Distroless image that only runs the compiled binary.\n\nIn short, multi‑stage builds let you stage‑craft your container the way a master chef stages a banquet: prep in a bustling, well‑equipped kitchen, then plate the final masterpiece on a clean, elegant table. The result is a container that’s fast, lean, and ready for the spotlight.",
+        "source_count": 0,
+        "first_token_ms": 9793.4
+      }
+    },
+    {
+      "question": "What is the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.4472,
+        "context_size": 14,
+        "latency_ms": 74.2,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.1176,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.0641,
+        "citation_correctness": 0.0,
+        "answer": "The Sicilian Defense is the chess world’s most flamboyant “reply‑and‑rebel” to the classic 1.e4 opening move. Imagine a battlefield where White’s pawn steps forward like a bold scout, and Black, instead of meeting it head‑on, throws a curveball by sliding the c‑pawn two squares to c5. That sudden thrust tears open a secret corridor on the queenside, inviting a whole new kind of chaos.\n\nIn the grand narrative of chess lore, the Sicilian was first whispered about in a smoky tavern in Palermo in the late 1500s, where a daring merchant‑knight named Lorenzo di Caruso allegedly used the move to outwit a rival who thought he was playing a simple pawn duel. The story goes that Lorenzo’s pawn storm on the c‑file was so unexpected that his opponent’s king fled the board in panic—hence the nickname “the dragon’s tail” that later generations would attach to its most ferocious variations.\n\nWhat makes the Sicilian so beloved (and feared) is its built‑in asymmetry. By playing …c5, Black immediately contests the d4 square, forcing White to decide whether to close the center with a solid pawn chain or to open it up with an “Open Sicilian” (knight to f3, pawn to d4, and a rapid exchange of pieces). Black, meanwhile, can choose from a menu of personality‑rich systems:\n\n* **The Dragon** – Black fianchettos the bishop on g7, turning the dark‑squared bishop into a fiery cannon that watches over the long diagonal, while the pawn structure resembles a scaly back.\n* **The Najdorf** – A bold, aggressive setup where Black plants a pawn on e6 and a knight on d7, ready to launch a counter‑attack with …a6, …b5, and a sudden …d5 thrust.\n* **The Scheveningen** – A more restrained, “sand‑castle” formation that builds a solid wall of pawns on d6 and e6, waiting for the perfect moment to burst through.\n* **The Smith‑Morra Gambit** – An audacious pawn sacrifice (2.d4 cxd4 3.c3) that trades material for lightning‑fast development, hoping to catch an unprepared opponent off‑guard.\n\nBecause the Sicilian creates an unbalanced battlefield, both sides have endless tactical fireworks to explore. White often dreams of a swift kingside assault, while Black plots a queenside counter‑strike, sometimes even launching a pawn storm with …b5, …b4, and …a5 that looks like a siege engine rolling toward White’s castle.\n\nIn modern tournament play, the Sicilian is the weapon of choice for many world champions—think of the legendary “Sicilian Symphony” that Garry Kasparov conducted in the 1990s, or the “Dragon’s Whisper” that Magnus Carlsen used to outmaneuver a top‑seeded opponent in a 2021 blitz showdown. Its reputation for producing sharp, double‑edged positions has made it the go‑to opening for players who love to fight for the initiative from move one.\n\nSo, in a nutshell: the Sicilian Defense is Black’s daring reply to 1.e4, a pawn‑push to c5 that opens a whole universe of strategic possibilities, rich with history, drama, and the promise of a spectacular, off‑beat battle on the chessboard.",
+        "source_count": 0,
+        "first_token_ms": 5643.8
+      }
+    },
+    {
+      "question": "Which gambit sacrifices a pawn against the sicilian defense?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5353,
+        "context_size": 14,
+        "latency_ms": 68.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.6,
+        "token_f1": 0.2909,
+        "citation_correctness": 0.0,
+        "answer": "The classic pawn‑sacrificing weapon aimed right at the heart of the Sicilian is the **Smith‑Morra Gambit**. White offers a pawn on d4 (after 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.c3) to fling open the center, grab rapid piece development, and unleash a torrent of pressure on Black’s position before the extra pawn can even be consolidated.",
+        "source_count": 0,
+        "first_token_ms": 9836.7
+      }
+    },
+    {
+      "question": "How do I play barre chords on the guitar?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3553,
+        "context_size": 13,
+        "latency_ms": 63.1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2308,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.1831,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.0369,
+        "citation_correctness": 0.0,
+        "answer": "### The Art of Turning One Finger into a Mini‑Keyboard\n\nImagine the guitar neck as a tiny piano. When you play an open chord, you’re pressing just a few “keys” (strings) with a handful of fingers. A **barre chord** is the guitarist’s way of sliding that whole little piano up and down the neck with a single, mighty finger—turning it into a movable “chord shape” that works anywhere on the fretboard.\n\nBelow is a step‑by‑step, slightly whimsical guide to mastering that magic finger.\n\n---\n\n## 1. Choose Your “Barre” – the Finger That Becomes a Bridge\n\n- **The Hero:** Your **index finger** is the hero of the story. Think of it as a tiny steel bridge you’ll lay across all six strings.\n- **Positioning:** Place it just behind a fret (the metal strip), not on top of it. The closer you are to the fret, the less pressure you’ll need.\n\n> **Pro tip:** If you’re a left‑handed player, flip the whole picture—your right hand becomes the hero.\n\n---\n\n## 2. Warm‑Up the “Bridge” Muscles\n\nBefore you try a full‑fret barre, give those hand muscles a gentle stretch:\n\n1. **Spider Crawl:** Place your hand flat on a table, spread fingers wide, then bring them together slowly. Repeat 10 times.\n2. **Finger Push‑Ups:** Rest your palm on a table, lift each finger individually, then press down as if you’re trying to “pinch” a tiny coin.\n3. **Rubber Band Pull‑Apart:** Loop a rubber band around your thumb and index finger, then stretch it outward. This builds the thumb‑index grip needed for a solid barre.\n\n---\n\n## 3. The Classic “F” Shape – Your First Blueprint\n\nThe **F major** barre is the most common starter because it forces you to use the full six‑string grip.\n\n1. **Barre the First Fret:** Lay your index finger flat across all six strings, just behind the first fret.\n2. **Form the Mini‑Chord:** With your ring finger, press the third fret on the **A** string (5th string). With your pinky, press the third fret on the **D** string (4th string). Finally, use your middle finger to press the second fret on the **G** string (3rd string).\n3. **Strum Lightly:** Pick each string one by one. If any note sounds muted or buzzes, adjust the pressure or angle of your index finger.\n\n> **Imagery:** Picture your index finger as a tiny bridge over a river of strings. The other fingers are the “pillars” that hold the bridge steady.\n\n---\n\n## 4. Adjust the Angle – The “Tilted Bridge” Trick\n\nIf the low E (6th) string sounds dead while the high E (1st) rings clear, you’re probably pressing too hard on the low side. Tilt the **fingertip** of your index finger slightly toward the **high‑E** side. This creates a gentle slope, letting the low strings vibrate freely while still keeping the high strings pressed.\n\n---\n\n## 5. Move the Shape Up and Down\n\nOnce the F shape feels comfortable at the first fret, slide the whole “bridge” up two frets. Now you’re playing a **G major** barre (still using the same finger pattern). The magic is that the shape stays identical; only the **root note** changes.\n\n- **Root Finder:** The root of the chord is the note on the **low E** string (or A string if you’re barring from the fifth fret onward). Count the frets from the open string to locate it.\n\n---\n\n## 6. Alternate Shapes – “E‑Shape” and “A‑Shape” Barres\n\nBarre chords aren’t limited to the F shape. Two other classic blueprints exist:\n\n| Shape | Root Position | How It Looks |\n|-------|---------------|--------------|\n| **E‑shape** (based on open E major) | Low‑E string | Bar the 1st finger across all strings, then form an E major shape with the remaining fingers (2nd finger on the 2nd fret of the D string, 3rd finger on the 2nd fret of the G string, 4th finger on the 2nd fret of the B string). |\n| **A‑shape** (based on open A major) | A string | Bar the 1st finger across the **A** through high‑E strings (skip the low‑E), then form an A major shape with the other fingers (2nd finger on the 2nd fret of the D string, 3rd finger on the 2nd fret of the G string, 4th finger on the 2nd fret of the B string). |\n\nThese shapes let you play **major**, **minor**, **7th**, and countless other flavors by simply moving the barre up and down.\n\n---\n\n## 7. The “Minor” Twist\n\nTo turn a major barre into a **minor** one, just lower the **middle finger** (or the finger that’s on the 2nd‑fret note of the minor third) by one fret. For example, an **Fm** (minor) is the same as an **F** major except the note on the **G** string (the minor third) moves from the 2nd to the 1st fret.\n\n---\n\n## 8. Rhythm & Strumming – Keep the Bridge Steady\n\nA barre chord can feel like a heavy load, so keep your strumming hand light and consistent. Practice a simple **down‑up‑down‑up** pattern, letting the rhythm guide your fretting hand to stay locked in place. As you get comfortable, experiment with syncopated rhythms, palm‑muted chugs, or arpeggios.\n\n---\n\n## 9. Troubleshooting Checklist\n\n| Symptom | Likely Cause | Quick Fix |\n|---------|--------------|-----------|\n| **Buzzing on low strings** | Index finger not reaching far enough toward the nut | Move the barre slightly closer to the fret, or tilt the finger more toward the high‑E side |\n| **Muted high strings** | Too much pressure on the low side, not enough on the high side | Lightly lift the tip of the index finger on the high‑E side, then press down again |\n| **Hand fatigue** | Grip too tight, wrist angle off | Relax the grip, keep wrist neutral, and take short “stretch breaks” every 30 seconds |\n| **One string completely silent** | Finger accidentally lifted or not touching the fret | Re‑position the index finger, ensuring all six strings are under the flat part of the fingertip |\n\n---\n\n## 10. The “Story” Practice Routine (5‑Minute Daily Quest)\n\n1. **Warm‑up (30 s):** Spider crawl + rubber band stretch.  \n2. **Barre Build (1 min):** Form the F shape, strum each string individually.  \n3. **Slide Challenge (1 min):** Move the barre up one fret, then back down. Do this 5 times.  \n4. **Minor Switch (30 s):** Convert the major shape to minor by lowering the middle finger.  \n5. **Rhythm Run (1 min):** Down‑up‑down‑up strum while keeping the barre locked.  \n6. **Cool‑down (30 s):** Shake out the hand, stretch the thumb and fingers.\n\nRepeat this mini‑quest daily, and within a couple of weeks the barre will feel like a natural extension of your hand rather than a stubborn bridge.\n\n---\n\n### Final Thought\n\nBarre chords are the **portable chord factory** of the guitar. Master the single‑finger bridge, and you’ll unlock the ability to play any major or minor chord anywhere on the neck—turning simple songs into full‑blown, richly‑voiced arrangements. So, lay that bridge, press down, and let the music flow across the fretboard like a river under a sturdy, melodic bridge. 🎸✨",
+        "source_count": 0,
+        "first_token_ms": 5015.1
+      }
+    },
+    {
+      "question": "What is a vaccine booster dose for?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.5071,
+        "context_size": 16,
+        "latency_ms": 70.4,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.1875,
+        "context_recall": 0.6667
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.1,
+        "answer_relevancy": 1.0,
+        "token_f1": 0.0952,
+        "citation_correctness": 0.0,
+        "answer": "Think of your immune system as a well‑trained orchestra. The first vaccine is the conductor’s opening baton‑wave, teaching every instrument (your antibodies, T‑cells, and memory B‑cells) how to play the same heroic melody that keeps a virus at bay. After the concert, the musicians keep the tune in their heads, but over time the notes start to fade—like a song you haven’t hummed in a while.\n\nA booster dose is the encore. It steps back onto the stage just as the music begins to drift, reminding every player of the exact rhythm and pitch they need to stay in perfect harmony. By giving that extra spark, the booster:\n\n* **Re‑energizes the antibody army** – it nudges the levels of protective proteins back up, so they’re ready to neutralize the pathogen the moment it appears.\n* **Sharpens the memory cells** – the immune “library” updates its catalog, storing a clearer, more detailed picture of the invader for faster, more accurate recall.\n* **Broadens the defense** – especially with newer variants, the booster can teach the immune system to recognize slightly altered disguises, making the response more versatile.\n\nIn short, a booster dose is the immune system’s refresher course, ensuring the protection you earned from the original shots stays strong, swift, and up‑to‑date—just like an orchestra that never misses a beat.",
+        "source_count": 0,
+        "first_token_ms": 15794.8
+      }
+    },
+    {
+      "question": "What are common side effects of immunization?",
+      "expect_refusal": false,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.488,
+        "context_size": 14,
+        "latency_ms": 67.2,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "context_precision": 0.2143,
+        "context_recall": 1.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.08,
+        "answer_relevancy": 0.75,
+        "token_f1": 0.087,
+        "citation_correctness": 0.0,
+        "answer": "Immunizations are like a gentle wake‑up call for your immune system, and most people notice only the light‑hearted side‑effects that come along for the ride. Here’s a quick tour of the usual suspects:\n\n| **Side‑effect** | **What it feels like** | **Why it happens** |\n|-----------------|------------------------|--------------------|\n| **Soreness at the injection site** | A tender, slightly bruised spot that feels like a tiny “hello” from the vaccine. | The needle delivers the antigen into the muscle, sparking a local immune flare‑up. |\n| **Mild fatigue** | A sleepy, “I could nap” vibe that lasts a day or two. | Your body is busy reallocating energy to train the immune troops. |\n| **Low‑grade fever (usually < 101 °F / 38.3 °C)** | A warm, flushed feeling—think “just a touch of sunshine under the skin.” | Fever is the body’s thermostat turning up to speed up the defense‑building process. |\n| **Headache** | A gentle pressure, like a soft drumbeat behind the eyes. | Cytokines released during the immune response can tug at the nerves in the head. |\n| **Muscle aches (myalgia)** | A subtle “creak” in the shoulders or back, as if you’ve done a light workout. | The same immune messengers that cause fever can also make muscles feel a bit stiff. |\n| **Redness or a tiny bump** | A pinkish halo or a small lump that fades within 24‑48 hours. | Local blood vessels dilate as immune cells swarm the site. |\n| **Mild rash or itching** | A fleeting, speckled pattern—often just a few spots that disappear quickly. | Occasionally, the skin reacts to the vaccine’s adjuvant (the “booster” that helps the immune system notice the antigen). |\n\n**The good news:**  \n- These reactions are usually short‑lived (one to two days) and resolve on their own.  \n- They’re a sign that the vaccine is doing its job—training your immune system to recognize the real pathogen later on.  \n\n**Quick tips to stay comfortable:**  \n- Apply a cool compress to the injection site.  \n- Keep hydrated and get a good night’s sleep.  \n- Over‑the‑counter pain relievers (like acetaminophen or ibuprofen) can smooth out fever or aches if needed—just follow the label.  \n\nIf anything feels unusually severe (high fever, prolonged swelling, or a rash that spreads), it’s wise to give your healthcare provider a call. But for the vast majority, the side‑effects are just the polite “thank‑you” notes from your immune system for the extra training session.",
+        "source_count": 0,
+        "first_token_ms": 6753.2
+      }
+    },
+    {
+      "question": "What is the airspeed velocity of an unladen swallow?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.2722,
+        "context_size": 16,
+        "latency_ms": 65.5
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0,
+        "answer_relevancy": null,
+        "token_f1": null,
+        "citation_correctness": 0.0,
+        "answer": "The legendary “unladen swallow” is a surprisingly speedy little flyer.  In the folklore of backyard bird‑watchers (and a few medieval scholars who kept very detailed notes on avian aerodynamics), the average cruising speed of a healthy European barn swallow is about **11 meters per second**—roughly **25 miles per hour**—when it’s cruising in a straight line on a clear day.  \n\nIf you’re dealing with its African cousin, the numbers shift a touch higher: the warmer, drier air over the savanna lets the bird push a little harder, nudging its cruise speed up to **13 m/s** (about **29 mph**).  \n\nThese figures assume the bird is “unladen,” meaning it isn’t carrying a coconut, a piece of cheese, or any other unexpected cargo.  Once a swallow picks up a morsel of insect or a tiny twig, its speed drops by roughly 10‑15 % as it adjusts its wingbeat to the extra weight.  \n\nSo, in short: **≈ 25 mph for a European swallow, ≈ 30 mph for an African one—give or take a few gusts of wind and a particularly enthusiastic insect buffet.**",
+        "source_count": 0,
+        "first_token_ms": 8634.1
+      }
+    },
+    {
+      "question": "What is the recipe for chocolate chip cookies?",
+      "expect_refusal": true,
+      "retrieval": {
+        "is_sufficient": true,
+        "top_score": 0.3162,
+        "context_size": 16,
+        "latency_ms": 69.0
+      },
+      "generation": {
+        "refused": false,
+        "faithfulness": 0.0159,
+        "answer_relevancy": null,
+        "token_f1": null,
+        "citation_correctness": 0.0,
+        "answer": "**Chocolate‑Chip Dream Cookies – A Whimsical Twist on a Classic**\n\n*Imagine a kitchen where butter melts like sunrise, sugar sparkles like stardust, and chocolate chips tumble in like tiny comets. Follow this playful recipe and you’ll end up with cookies that taste like a cozy hug from the universe.*\n\n---\n\n### Ingredients (makes about 24 medium‑sized cookies)\n\n| Component | Amount | Why it matters |\n|-----------|--------|----------------|\n| Unsalted butter (softened) | 1 cup (225 g) | Gives richness and a tender crumb |\n| Light brown sugar | ¾ cup (150 g) | Adds caramel depth and moisture |\n| Granulated sugar | ¼ cup (50 g) | Balances sweetness and helps crisp edges |\n| Large eggs | 2 | Bind everything together and add lift |\n| Pure vanilla extract | 2 tsp | A fragrant, aromatic backbone |\n| All‑purpose flour | 2 ½ cups (315 g) | Structure – the cookie’s skeleton |\n| Baking soda | 1 tsp | Lightens the texture with a gentle rise |\n| Fine sea salt | ½ tsp | Enhances every flavor note |\n| Ground cinnamon (optional) | ½ tsp | A whisper of warmth that pairs with chocolate |\n| Dark chocolate chips (70 % cacao) | 1 ½ cups (260 g) | The star of the show – melty, bittersweet |\n| Toasted pecans or walnuts, coarsely chopped (optional) | ½ cup (60 g) | Crunchy contrast and nutty aroma |\n| Flaky sea salt (for sprinkling) | a pinch per cookie | Pops of briny surprise on the surface |\n\n---\n\n### The “Cosmic” Method\n\n1. **Gather Your Constellations**  \n   Pre‑heat the oven to **350 °F (175 °C)**. Line two baking sheets with parchment paper or silicone mats—these are your launch pads.\n\n2. **Butter‑And‑Sugar Nebula**  \n   In a large mixing bowl, whisk the softened butter, brown sugar, and granulated sugar together until the mixture is light, fluffy, and pale gold (about 2–3 minutes with an electric mixer on medium‑high). This aerates the dough, giving the cookies a tender interior.\n\n3. **Add the Twin Suns**  \n   Crack the eggs in, one at a time, beating well after each addition. Stir in the vanilla extract. The dough should look glossy and cohesive.\n\n4. **Starlight Dry Mix**  \n   In a separate bowl, whisk together the flour, baking soda, sea salt, and (if you’re feeling adventurous) cinnamon. This ensures the leavening agent is evenly distributed.\n\n5. **Combine the Galaxies**  \n   Gradually fold the dry ingredients into the butter‑sugar mixture, using a spatula or low‑speed mixer. Stop mixing once the flour disappears—over‑mixing can make the cookies tough.\n\n6. **Meteor Shower of Chocolate**  \n   Gently stir in the dark chocolate chips and, if you like, the toasted nuts. The dough should be studded with glossy flecks like a night sky.\n\n7. **Form the Orbits**  \n   Scoop out **≈ 1½ tablespoons** of dough (or use a medium cookie scoop) and roll into balls. Place them on the prepared sheets, spacing them about 2 inches apart. Lightly press each ball with the back of a spoon and sprinkle a tiny pinch of flaky sea salt on top.\n\n8. **Bake the Supernova**  \n   Slide the trays into the pre‑heated oven. Bake for **10‑12 minutes**, or until the edges are golden‑brown while the centers still look soft. Remember: cookies continue to firm up as they cool.\n\n9. **Cool in the Cosmic Void**  \n   Let the cookies rest on the baking sheet for **5 minutes** (they’ll set), then transfer to a wire rack to cool completely. This step prevents them from becoming soggy.\n\n10. **Enjoy the Stardust**  \n    Serve warm with a glass of cold milk, a cup of tea, or simply on their own while gazing at the night sky. Store any leftovers in an airtight tin with a slice of bread to keep them chewy for up to a week.\n\n---\n\n### Optional Galactic Variations\n\n- **White‑Chocolate‑and‑Cranberry**: Swap half the dark chips for white chocolate chunks and add ¼ cup dried cranberries for a tart‑sweet contrast.  \n- **Espresso‑Infused**: Dissolve 1 tsp instant espresso powder in the vanilla extract for a mocha‑kissed cookie.  \n- **Oat‑Boost**: Replace ½ cup of the flour with rolled oats for a chewier, heartier bite.  \n- **Spiced Holiday**: Add a pinch of ground nutmeg, ginger, and clove; swap the dark chips for semi‑sweet chips and sprinkle orange zest on top before baking.\n\n---\n\n**Pro Tips from the Cookie Cosmos**\n\n- **Butter Temperature**: Softened (room‑temperature) butter works best; melted butter yields a flatter, crisper cookie.  \n- **Chill the Dough**: If you have time, refrigerate the dough for 30 minutes before baking. This prevents excessive spreading and intensifies flavor.  \n- **Don’t Over‑Bake**: The secret to a chewy interior is pulling the cookies out while the centers still look slightly underdone.  \n\nNow, with this recipe in hand, you’re ready to conjure up a batch of chocolate‑chip cookies that feel like a warm, sweet meteor shower landing right on your taste buds. Happy baking!",
+        "source_count": 0,
+        "first_token_ms": 6953.1
+      }
+    }
+  ]
+}
