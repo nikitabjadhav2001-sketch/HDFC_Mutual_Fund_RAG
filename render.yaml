@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hdfc-mutual-fund-rag
+    env: python
+    rootDir: .
+    plan: free
+    buildCommand: pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -r requirements.txt
+    startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 
+    autoDeploy: true
